@@ -1,5 +1,4 @@
-## SykeBen
-### Welcome to my main GitHub Page!
+## About Me
 I am an indipendent developer, currently in High School, who is familiar with languages such as: Batch/Shell Scripts, Python 3, HTML, CSS, and most importantly, C++. I like to make DIY projects, like a Raspberry Pi media server, or even an Arduino Smart Door Lock. I have found GitHub to be a huge, important tool to a developer like me. Feel free to check out some of my projects!
 
 ## My Project Sites
