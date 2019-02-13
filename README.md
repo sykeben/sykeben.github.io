@@ -10,4 +10,4 @@ I am an indipendent developer, currently in High School, who is familiar with la
 ## My Best Repos
 - **[OverOS](https://github.com/sykeben/overos)**, Multi-platform "overlaying" C++ OS.
 - **[BITS-PyOS](https://github.com/sykeben/BITS-PyOS)**, Python-based OS.
-- **[Spongebuntu](https://github.com/sykeben/Spongebuntu)**, Spongebob-themed Linux distro, similar to Hanna Montana Linux.
+- **[Spongebuntu](https://github.com/sykeben/Spongebuntu)**, Spongebob-themed Linux distro, similar to Hanna Montana Linux (this is obviously a joke).
