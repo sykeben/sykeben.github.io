@@ -7,6 +7,9 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         
+        <!-- Page Specific CSS -->
+        <link rel="stylesheet" href="/tutorials/content.css">
+        
         <title>SykeBen</title>
         
         <link rel="icon" type="image/png" href="/favicon.png">
@@ -29,11 +32,66 @@
         
         <div class="container-fluid p-5">
             
+            <div class="row mt-n4 mb-3">
+                <div class="col-12">
+                    <h3 class="h3 ml-3">Getting Started with GitHub Pages</h3>
+                </div>
+            </div>
+            
             <div class="row">
                 
-                <div class="col-9 pr-5">
-                    <h2 class="h2">Getting Started with GitHub Pages</h2>
-                    <h5 class="h5 pt-3"><img src="/images/stop.png" class="d-inline-block align-center ml-n1">This tutorial is not ready yet, check back soon.</h5>
+                <div class="col-8 mb-n5">
+                    <div id="stepCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <ol class="carousel-indicators dark">
+                            <li data-target="#stepIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#stepIndicators" data-slide-to="1"></li>
+                            <li data-target="#stepIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner rounded-lg border">
+                            <div class="carousel-item active">
+                                <img src="/images/tutorial-thumbs/github-pages.jpg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/tutorial-slides/github-pages/01.png" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/tutorial-thumbs/more.png" class="d-block w-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-4 mb-n5">
+                    
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-secondary" onclick="carPrev()">&larr; Prev</button>
+                            <button type="button" class="btn btn-primary" onclick="carNext()">Next &rarr;</button>
+                            &nbsp;<strong><span id="stepNumber">1</span></strong>/3
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12 pt-3">
+                            <div id="stepText0" class="stepText">
+                                <h5 class="h5 pb-3">Introduction</h5>
+                                <p class="lead pb-1">GitHub pages is a great way to show off your skills as a developer, publish documentation, cheaply host fully custom websites, and more.</p>
+                                <p>In fact, the website you are currently reading is a GitHub pages site (more on this in the <a href="#" onclick="carNext()" class="text-body">next slide</a>). The whole reason this site is different than, let's say, a Google Site, is the fact it fully supports custom HTML, CSS, JS, and whatever else you may want in your site. It's like having a free webserver, but you can link it to you, and your repositories!</p>
+                            </div>
+                            <div id="stepText1" class="stepText hidden">
+                                <h5 class="h5 pb-3">Example</h5>
+                                <p class="lead pb-1">A great example of using GitHub pages to make a real, working, site is what your looking at now!</p>
+                                <p class="pb-1">In fact, this whole webpage is being hosted on GitHub pages, even with custom HTML, CSS, JS, and proper Bootstrap! The thing to left, the carousel, is a custom component provided by Bootstrap. The code that makes this text change with the carousel when you click <span class="bg-primary text-light rounded d-inline-block">Next &rarr;</span> is a custom JS script.</p>
+                                <p>The reason this site works and looks the way it does is proof that GitHub pages is a great alternative to running a standalone web server.</p>
+                            </div>
+                            <div id="stepText2" class="stepText hidden">
+                                <h5 class="h5 pb-3">Uh, Oh!</h5>
+                                <p class="lead pb-1">This tutorial isn't finished!</p>
+                                <p>I haven't finished writing this one yet! Please check back later and it will be finished eventually.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
                     
             </div>
@@ -44,6 +102,9 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <!-- Page Specific JS -->
+        <script src="/tutorials/carousel.js"></script>
         
     </body>
     
