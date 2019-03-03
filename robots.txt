@@ -1,1 +1,1 @@
-Sitemap: https://sykeben.github.io/sitemap.xml
+Sitemap: https://raw.githubusercontent.com/sykeben/sykeben.github.io/master/sitemap.xml
