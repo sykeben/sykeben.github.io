@@ -10,7 +10,7 @@
         <!-- Page Specific CSS -->
         <link rel="stylesheet" href="/tutorials/content.css">
         
-        <title>SykeBen</title>
+        <title>SykeBen &rarr; Tutorial Viewer</title>
         
         <link rel="icon" type="image/png" href="/favicon.png">
             
@@ -40,19 +40,29 @@
             
             <div class="row">
                 
-                <div class="col-8 mb-n5">
+                <div class="col-7 mb-n5">
                     <div id="stepCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-                        <ol class="carousel-indicators dark">
-                            <li data-target="#stepIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#stepIndicators" data-slide-to="1"></li>
-                            <li data-target="#stepIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner rounded-lg border">
+                        <div class="carousel-inner rounded-lg">
                             <div class="carousel-item active">
                                 <img src="/images/tutorial-thumbs/github-pages.jpg" class="d-block w-100">
                             </div>
                             <div class="carousel-item">
                                 <img src="/images/tutorial-slides/github-pages/01.png" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/tutorial-slides/github-pages/02.png" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/tutorial-slides/github-pages/03.png" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/tutorial-slides/github-pages/04.png" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/tutorial-slides/github-pages/05.png" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/tutorial-slides/github-pages/06.png" class="d-block w-100">
                             </div>
                             <div class="carousel-item">
                                 <img src="/images/tutorial-thumbs/more.png" class="d-block w-100">
@@ -61,13 +71,13 @@
                     </div>
                 </div>
                 
-                <div class="col-4 mb-n5">
+                <div class="col-5 mb-n5">
                     
                     <div class="row">
                         <div class="col-12">
                             <button type="button" class="btn btn-secondary" onclick="carPrev()">&larr; Prev</button>
                             <button type="button" class="btn btn-primary" onclick="carNext()">Next &rarr;</button>
-                            &nbsp;<strong><span id="stepNumber">1</span></strong>/3
+                            &nbsp;<strong><span id="stepNumber">1</span></strong>/<span id="stepCount">?</span>
                         </div>
                     </div>
                     
@@ -85,9 +95,43 @@
                                 <p>The reason this site works and looks the way it does is proof that GitHub pages is a great alternative to running a standalone web server.</p>
                             </div>
                             <div id="stepText2" class="stepText hidden">
-                                <h5 class="h5 pb-3">Uh, Oh!</h5>
-                                <p class="lead pb-1">This tutorial isn't finished!</p>
-                                <p>I haven't finished writing this one yet! Please check back later and it will be finished eventually.</p>
+                                <h5 class="h5 pb-3">Preparing a Repo</h5>
+                                <p class="lead pb-1">Before we can start writing your Pages, we need to prepare a new repository.</p>
+                                <p class="pb-1">First, on your GitHub dashboard, click your user icon (A1), and then click "Your repositories" in the dropdown (A2). This will bring you to your repository list, there click "New" (B). Now, you're creating a repository! Give it a name (C1), a description (C2), check the "README" box (C3), and click "Create Repository" (C4).</p>
+                                <p>If you arrive at a page similar to the one shown (D), you've succesfully created a repository and are ready to move onto the <a href="#" onclick="carNext()" class="text-body">next step</a>.</p>
+                            </div>
+                            <div id="stepText3" class="stepText hidden">
+                                <h5 class="h5 pb-3">Writing the README</h5>
+                                <p class="lead pb-1">So, now you have a repo, it's time to write something!</p>
+                                <p class="pb-1">To begin editing the <code>README.md</code> file, which is the "homepage", we need to open the editor. Click the pencil next to the README preview (shown in the image) to begin.</p>
+                                <p class="pb-1">Click inside the editor box, and remove all the text to make sure we have a clean slate. Now, type this exact code:<br>
+                                    <code># My First Page</code><br>
+                                    <code>**Hello, World!** This is my first page!</code>
+                                </p>
+                                <p>This is the new contents of the document. It is written in Markdown, which you can learn about <a href="https://guides.github.com/features/mastering-markdown/">here</a>.</p>
+                            </div>
+                            <div id="stepText4" class="stepText hidden">
+                                <h5 class="h5 pb-3">Saving Your Changes</h5>
+                                <p class="lead pb-1">Now that we've written something, we have to save it.</p>
+                                <p>Saving things in Git is called "committing" them. This means you "commit" to the changes you've made and you want to "push" them to the repository. By clicking the "Commit changes" button at the bottom (shown in the image), you "commit" the file, and save it. Click the "commit" button now.</p>
+                            </div>
+                            <div id="stepText5" class="stepText hidden">
+                                <h5 class="h5 pb-3">Enabling the Site</h5>
+                                <p class="lead pb-1">With the README ready, it's now time to enable the GitHub Pages site.</p>
+                                <p class="pb-1">To get to the place where you can enable it, head to the "Settings" tab (1). Now that you're there, under "GitHub Pages", click the source selection dropdown (2), and select "master branch" (3). This tells GitHub Pages to use the whole repository as a webpage, turning that README.md file we wrote earlier into the homepage.</p>
+                                <p>If this is all done correctly you should see a message in a blue bar that says "GitHub Pages source saved." at the top of your screen.</p>
+                            </div>
+                            <div id="stepText6" class="stepText hidden">
+                                <h5 class="h5 pb-3">Look, Ma!</h5>
+                                <p class="lead pb-1">Now that we've "published" your site, let's go check it out.</p>
+                                <p class="mb-1">To view your newly created page type a URL formatted like the one below into your addressbar and hit go.</p>
+                                <img src="/images/tutorial-slides/github-pages/url.png" class="rounded w-75 d-inline-block mb-3 text-center">
+                                <p>For example, if your username was <code>therock</code>, and the name of the repo is <code>epic-site</code>, then the URL would be: <code>therock.github.io/epic-site</code>.</p>
+                            </div>
+                            <div id="stepText7" class="stepText hidden">
+                                <h5 class="h5 pb-3">Getting More Out Of It</h5>
+                                <p class="lead pb-1">With the basics down, you're ready to move on.</p>
+                                <p>To move on, wait until I publish the next tutorial for GitHub Pages. Until then, expirement! Poke around and explore by yourself. Good luck!</p>
                             </div>
                         </div>
                     </div>
@@ -104,6 +148,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
         <!-- Page Specific JS -->
+        <script src="/js-extra/js.cookie-2.2.0.min.js"></script>
         <script src="/tutorials/carousel.js"></script>
         
     </body>
