@@ -31,7 +31,9 @@ function showProper() {
 }
 
 function setSlideNumber(slideNumber) {
-    $("#stepCarousel").carousel(parseInt(slideNumber));
+    if (!isNaN(slideNumber)) {
+        $("#stepCarousel").carousel(parseInt(slideNumber));
+    }
 }
 
 function carPrev() {
