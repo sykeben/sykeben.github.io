@@ -9,32 +9,37 @@
 
 <url>
   <loc>https://sykeben.github.io/</loc>
-  <lastmod>2019-03-03T00:24:05+00:00</lastmod>
+  <lastmod>2019-03-04T20:45:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://sykeben.github.io/index.html</loc>
-  <lastmod>2019-03-03T00:24:05+00:00</lastmod>
+  <lastmod>2019-03-04T20:45:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sykeben.github.io/projects/bluedash.html</loc>
-  <lastmod>2019-03-03T00:24:05+00:00</lastmod>
+  <lastmod>2019-03-04T20:45:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sykeben.github.io/projects/overos.html</loc>
-  <lastmod>2019-03-03T00:24:05+00:00</lastmod>
+  <lastmod>2019-03-04T20:45:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sykeben.github.io/projects/bits-pyos.html</loc>
-  <lastmod>2019-03-03T00:24:05+00:00</lastmod>
+  <lastmod>2019-03-04T20:45:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sykeben.github.io/tutorials/index.html</loc>
-  <lastmod>2019-03-03T00:24:05+00:00</lastmod>
+  <lastmod>2019-03-04T20:45:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sykeben.github.io/hosting/index.html</loc>
+  <lastmod>2019-03-04T20:45:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -59,7 +64,22 @@
 </url>
 <url>
   <loc>https://sykeben.github.io/tutorials/github-pages.html</loc>
-  <lastmod>2019-03-03T00:24:05+00:00</lastmod>
+  <lastmod>2019-03-04T20:45:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sykeben.github.io/tutorials/markdown.html</loc>
+  <lastmod>2019-03-04T20:45:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sykeben.github.io/hosting/template/</loc>
+  <lastmod>2019-03-04T20:45:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sykeben.github.io/hosting/5980-dakboard/</loc>
+  <lastmod>2019-03-04T20:45:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
@@ -70,6 +90,16 @@
 <url>
   <loc>https://sykeben.github.io/BlueDashPro/settings.html</loc>
   <lastmod>2019-02-28T23:07:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sykeben.github.io/hosting/template/index.html</loc>
+  <lastmod>2019-03-04T20:45:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sykeben.github.io/hosting/5980-dakboard/index.html</loc>
+  <lastmod>2019-03-04T20:45:00+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 
