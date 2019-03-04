@@ -1,0 +1,122 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <!-- Page Specific CSS -->
+        <link rel="stylesheet" href="/tutorials/content.css">
+        
+        <title>SykeBen &rarr; Tutorial Viewer</title>
+        
+        <link rel="icon" type="image/png" href="/favicon.png">
+            
+    </head>
+
+    <body>
+        
+        <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/avatar.png" width="30" height="30" class="d-inline-block align-top rounded mr-1" alt="">
+                SykeBen
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/tutorials/index.html">&larr; Back</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="container-fluid p-5">
+            
+            <div class="row mt-n4 mb-3">
+                <div class="col-12">
+                    <h3 class="h3 ml-3">Basic Markdown</h3>
+                </div>
+            </div>
+            
+            <div class="row">
+                
+                <div class="col-7 mb-n5">
+                    <div id="stepCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div class="carousel-inner rounded-lg">
+                            <div class="carousel-item active">
+                                <img src="/images/tutorial-thumbs/markdown.jpg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/tutorial-slides/markdown/01.png" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/tutorial-slides/markdown/02.png" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/tutorial-slides/markdown/03.png" class="d-block w-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-5 mb-n5">
+                    
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-secondary" onclick="carPrev()">&larr; Prev</button>
+                            <button type="button" class="btn btn-primary" onclick="carNext()">Next &rarr;</button>
+                            &nbsp;<strong><span id="stepNumber">1</span></strong>/<span id="stepCount">?</span>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12 pt-3">
+                            <div id="stepText0" class="stepText">
+                                <h5 class="h5 pb-3">Introduction</h5>
+                                <p class="lead pb-1">So, you wanna learn Markdown?</p>
+                                <p class="pb-1">Markdown (or <code>md</code> files) is a document language mostly used by developers for its simplicity and amazing ability to be cross-platform. Markdown is used by developers around the world and is a great language to learn as all of GitHub supports it.</p>
+                                <p>In this tutorial, you will learn the basics of Markdown, why it's used, and how to use it.</p>
+                            </div>
+                            <div id="stepText1" class="stepText hidden">
+                                <h5 class="h5 pb-3">What's StackEdit?</h5>
+                                <p class="lead pb-1">To make editing Markdown easier, we'll need an editor.</p>
+                                <p class="pb-1">For this, we'll use StackEdit, a free, web-based markdown editor. StackEdit saves your edited files to your browser, so they'll remain saved there until you reset it, or clear out the history.</p>
+                                <p class="pb-1">If you worried about them using your data, read their <a href="https://stackedit.io/privacy_policy.html" class="text-body" target="_blank">privacy policy</a>. They promise your information will be safe.</p>
+                                <a href="https://stackedit.io/app" type="button" class="btn btn-light border" target="_blank">
+                                    StackEdit
+                                    <img src="/images/external-link.svg" class="d-inline-block align-middle" title="This is a link to an external site." height="16">
+                                </a>
+                            </div>
+                            <div id="stepText2" class="stepText hidden">
+                                <h5 class="h5 pb-3">Preparing the Workspace</h5>
+                                <p class="lead pb-1">Before you get started, let's clean up.</p>
+                                <p class="pb-1">Since you probobly haven't visited StackEdit yet, it's going to be cluttered. Let's clean it up. First, open the folder menu (A1), right click on the welcome file (A2), and click delete (A3). Now, click new file (B), type in a name like <code>readme.md</code> (C) and press <span class="text-dark bg-light rounded px-1">Enter&#9166;</span>.</p>
+                                <p>With the file created, let's clear it out. Click at the end of the editor (D), and hold backspace until all the text is gone. Once it's cleared, the file is ready.</p>
+                            </div>
+                            <div id="stepText3" class="stepText hidden">
+                                <h5 class="h5 pb-3">Basic Formatting</h5>
+                                <p class="lead pb-1">Let's write some Markdown!</p>
+                                <p class="pb-1">Before writing, let's quickly review StackEdit. There are 3 "sections", the File Menu, Editor, and Preview Window. These are pretty self-explanitory.</p>
+                                <p>There are 3 basic formats, normal, <span class="font-italic">italic</span>, and <strong>bold</strong>. Normal text has no formatting brackets around it, it's normal like <code>this</code> (A). <span class="font-italic">Italic</span> text is surrounded by 1 astrik, like <code>*this*</code> (B). And, <strong>bold</strong> text is surrounded by 2 astriks, like <code>**this**</code> (C).</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                    
+            </div>
+                
+        </div>
+        
+        <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <!-- Page Specific JS -->
+        <script src="/js-extra/js.cookie-2.2.0.min.js"></script>
+        <script src="/tutorials/carousel.js"></script>
+        
+    </body>
+    
+</html>

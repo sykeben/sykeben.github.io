@@ -44,4 +44,19 @@ function carNext() {
     $("#stepCarousel").carousel("next");
 }
 
+var keypressFunctions = [];
+keypressFunctions[37] = carPrev; // Left
+keypressFunctions[39] = carNext; // Right
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+        case 37:
+            // Left
+            carPrev();
+        case 39:
+            // Right
+            carNext();
+    };
+};
+
 window.onload = initAll;
