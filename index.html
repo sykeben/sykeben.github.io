@@ -8,9 +8,10 @@
         <title>SykeBen</title>
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-        
         <link rel="stylesheet" href="styles/gradients.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link rel="stylesheet" href="styles/delays.css">
     
     </head>
     
@@ -28,25 +29,54 @@
         
         </nav>
         
-        <div class="m-0 p-5 container-fluid text-dark bg-grad-friday shadow-sm animated fadeIn">
+        <div class="m-0 p-5 container-fluid bg-grad-friday shadow-sm animated fadeIn">
             
             <div class="row">
                 
-                <div class="pl-lg-5 col-lg text-lg-left animated fadeInDown delay-1s">
+                <div class="pl-lg-5 col-lg text-lg-left animated fadeInDown">
                     <h1 class="display-4 font-weight-light">Hello, World!</h1>
                 </div>
                 
-                <div class="pr-lg-5 col-lg text-lg-right animated fadeInUp delay-1s">
-                    <h1 class="mt-lg-2 display-5 font-weight-lighter">Welcome to my webpage.</h1>
+                <div class="pr-lg-5 col-lg text-lg-right animated fadeInUp">
+                    <h1 class="mt-lg-2 pt-lg-1 display-5 font-weight-lighter">Welcome to my webpage.</h1>
                 </div>
                 
             </div>
             
         </div>
+        
+        <div class="p-5 container">
+            
+            <div class="row mx-n4">
+            
+                <div class="mx-4 p-0 col-lg bg-light border rounded shadow animated zoomIn faster delay-0.25s">
+                    <div class="m-0 px-3 py-2 text-white rounded-top w-100 bg-grad-mirage d-block">
+                        <h2 class="display-5 font-weight-light">Code</h2>
+                    </div>
+                    <div class="lead m-0 px-4 py-3 rounded-bottom w-100 d-block">
+                        Out of the <span id="repo-count">0</span> repositories I own, there are a couple gems. Look at my top repositories here.
+                    </div>
+                </div>
+                
+                <div class="mx-4 p-0 col-lg bg-light text-white border rounded shadow">
+                    <div class="m-0 px-3 py-2 rounded-top w-100 bg-grad-chitty-chitty-bang-bang d-block">
+                        <h2 class="display-5 font-weight-light">Features</h2>
+                    </div>
+                    <div class="lead m-0 px-4 py-3 rounded-bottom w-100 d-block">
+                        
+                    </div>
+                </div>
+            
+            </div>
+        
+        </div>
     
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="loaders/homestats.js"></script>
     
     </body>
 
