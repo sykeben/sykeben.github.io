@@ -51,4 +51,4 @@ setTimeout(function() {
     }
     loader.addEventListener('animationend', loaderout)
     
-}, 250)
+}, 500)
