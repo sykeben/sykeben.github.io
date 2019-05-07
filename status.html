@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+        <link rel="icon" type="image/png" href="branding/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <title>SykeBen : Status</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/bootmod.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link rel="stylesheet" href="styles/delays.css">
+    
+    </head>
+    
+    <body>
+        
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow">
+            
+            <a class="navbar-brand" href="index.html">
+                <img src="branding/avatar.png" height="30" class="d-inline-block align-top rounded-sm border border-darkish shadow-sm">
+            </a>
+            
+            <ul class="navbar-nav" id="nav-list"></ul>
+            <script>const pagename="Status"</script>
+            <script src="loaders/navbar.js"></script>
+        
+        </nav>
+        
+        <div class="container p-4">
+            
+            <div class="row my-5 pb-1 d-block animated fadeInLeft delay-0p25s">
+                <h1 class="display-5 font-weight-light">How's GitHub?</h1>
+                <p class="lead-bigger font-weight-lighter">Right now I have <span id="follower-count">0</span> followers and am following <span id="following-count">0</span> other people. I have been a user since <span id="user-since">0/0/0</span> and am loving it.</p>
+            </div>
+            
+            <div class="row my-5 pb-1 d-block animated fadeInLeft delay-0p75s">
+                <h1 class="display-5 font-weight-light">Project Status</h1>
+                <p class="lead-bigger font-weight-lighter">I am currently working on a project for RasDash. Specifically, I am moderatly rewriting some of the UI as I've gotten much more skilled as a developer since the first release.</p>
+            </div>
+
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="loaders/statstats.js"></script>
+    
+    </body>
+
+</html>

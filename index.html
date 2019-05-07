@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+        <link rel="icon" type="image/png" href="branding/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <title>SykeBen</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/gradients.css">
+        <link rel="stylesheet" href="styles/cards.css">
+        <link rel="stylesheet" href="styles/bootmod.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link rel="stylesheet" href="styles/delays.css">
+    
+    </head>
+    
+    <body>
+        
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow">
+            
+            <a class="navbar-brand" href="index.html">
+                <img src="branding/avatar.png" height="30" class="d-inline-block align-top rounded-sm border border-darkish shadow-sm">
+            </a>
+            
+            <ul class="navbar-nav" id="nav-list"></ul>
+            <script>const pagename="Home"</script>
+            <script src="loaders/navbar.js"></script>
+        
+        </nav>
+        
+        <div class="m-0 px-5 py-4 bg-grad-friday shadow animated fadeIn slower">
+            
+            <div class="text-center mb-4 d-block animated flip">
+                <h1 class="display-1 font-weight-lighter">SykeBen</h1>
+            </div>
+            
+        </div>
+        
+        <div class="p-5 container animated fadeIn slow delay-0p25s">
+            
+            <div class="row mx-n5 my-0">
+            
+                <div id="card-repos" class="m-5 p-0 col-lg card-link bg-light border rounded shadow animated zoomIn fast delay-0p5s" onclick="cardURL('repos', 'repos.html')">
+                    <div class="m-0 p-4 text-white rounded-top w-100 bg-grad-mirage d-block">
+                        <h1 class="display-5 font-weight-light">My Repos</h1>
+                    </div>
+                    <div class="lead m-0 px-4 pt-3 pb-4 rounded-bottom w-100 d-block">
+                        I currently have <span id="repo-count">0</span> public repositories. You can view the full list of them here on my website.
+                    </div>
+                </div>
+                
+                <div id="card-products" class="m-5 p-0 col-lg card-link bg-light border rounded shadow animated zoomIn fast delay-0p75s" onclick="cardURL('products', 'products.html')">
+                    <div class="m-0 p-4 text-white rounded-top w-100 bg-grad-chitty-chitty-bang-bang d-block">
+                        <h1 class="display-5 font-weight-light">Featured Products</h1>
+                    </div>
+                    <div class="lead m-0 px-4 pt-3 pb-4 rounded-bottom w-100 d-block">
+                        Want to see the best of what I have to offer? Check out my best products!
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="row mx-n5 my-0">
+            
+                <div id="card-status" class="m-5 p-0 col-lg card-link bg-light border rounded shadow animated zoomIn fast delay-1s" onclick="cardURL('status', 'status.html')">
+                    <div class="m-0 p-4 text-white rounded-top w-100 bg-grad-sherbert d-block">
+                        <h1 class="display-5 font-weight-light">Status</h1>
+                    </div>
+                    <div class="lead m-0 px-4 pt-3 pb-4 rounded-bottom w-100 d-block">
+                        Here I'll write updates on the current status of some of my projects.
+                    </div>
+                </div>
+                
+                <div id="card-resume" class="m-5 p-0 col-lg card-link bg-light border rounded shadow animated zoomIn fast delay-1p25s" onclick="cardURL('resume', 'resume.html')">
+                    <div class="m-0 p-4 text-white rounded-top w-100 bg-grad-ash d-block">
+                        <h1 class="display-5 font-weight-light">Resume</h1>
+                    </div>
+                    <div class="lead m-0 px-4 pt-3 pb-4 rounded-bottom w-100 d-block">
+                        I have no job yet. Feel free to hire me or offer me an internship!
+                    </div>
+                </div>
+            
+            </div>
+        
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="loaders/homestats.js"></script>
+        <script src="loaders/cards.js"></script>
+    
+    </body>
+
+</html>
