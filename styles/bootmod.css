@@ -3,6 +3,10 @@
 }
 
 .lead-bigger {
-	font-size: 1.5rem;
+	font-size: 1.75rem;
 	font-weight: 300;
+}
+
+.shadow-xs {
+	box-shadow: 0 .075rem .125rem rgba(0,0,0,.05) !important;
 }
