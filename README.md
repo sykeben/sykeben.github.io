@@ -1,3 +1,3 @@
-# Pardon my dust!
+# Legacy Mode
 
-I am currently working on completely rewriting the site using HTML5 and bootstrap, so things will not work, and there is a chance everything will be broken for a while.
+This is the legacy branch. I only am keeping this around as reference.
