@@ -1,8 +1,0 @@
-.hidden {
-    display: none;
-}
-
-.img-wacked {
-    -webkit-filter: invert(1);
-    filter: invert(1);
-}
