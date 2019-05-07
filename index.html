@@ -9,6 +9,7 @@
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/gradients.css">
+        <link rel="stylesheet" href="styles/cards.css">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
         <link rel="stylesheet" href="styles/delays.css">
@@ -47,23 +48,23 @@
         
         <div class="p-5 container">
             
-            <div class="row mx-n4">
+            <div class="row mx-n4 my-0">
             
-                <div class="mx-4 p-0 col-lg bg-light border rounded shadow animated zoomIn faster delay-0.25s">
-                    <div class="m-0 px-3 py-2 text-white rounded-top w-100 bg-grad-mirage d-block">
+                <div class="mx-4 my-4 p-0 col-lg card-link bg-light border rounded shadow animated zoomIn faster delay-0p25s" onclick="cardURL('repos.html')">
+                    <div class="m-0 px-4 py-3 text-white rounded-top w-100 bg-grad-mirage d-block">
                         <h2 class="display-5 font-weight-light">Code</h2>
                     </div>
                     <div class="lead m-0 px-4 pt-3 pb-4 rounded-bottom w-100 d-block">
-                        Out of the <span id="repo-count">0</span> repositories I own, there are a couple gems. Look at my top repositories here.
+                        I currently have <span id="repo-count">0</span> public repositories. You can view the full list of them here on my website.
                     </div>
                 </div>
                 
-                <div class="mx-4 p-0 col-lg bg-light text-white border rounded shadow">
-                    <div class="m-0 px-3 py-2 rounded-top w-100 bg-grad-chitty-chitty-bang-bang d-block">
+                <div class="mx-4 my-4 p-0 col-lg card-link bg-light border rounded shadow animated zoomIn faster delay-0p5s" onclick="cardURL('projects.html')">
+                    <div class="m-0 px-4 py-3 text-white rounded-top w-100 bg-grad-chitty-chitty-bang-bang d-block">
                         <h2 class="display-5 font-weight-light">Featured Projects</h2>
                     </div>
                     <div class="lead m-0 px-4 pt-3 pb-4 rounded-bottom w-100 d-block">
-                        
+                        Want to see the best of what I have to offer?
                     </div>
                 </div>
             
@@ -77,6 +78,7 @@
         
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="loaders/homestats.js"></script>
+        <script src="loaders/cards.js"></script>
     
     </body>
 
