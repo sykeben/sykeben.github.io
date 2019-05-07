@@ -3,3 +3,9 @@
 	box-shadow: 0 1rem 2rem rgba(0,0,0,.2) !important;
     cursor: pointer;
 }
+
+.card-link-sm:hover {
+    filter: brightness(1.05) saturate(1.5);
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,.125) !important;
+    cursor: pointer;
+}
