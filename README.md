@@ -1,3 +1,0 @@
-# Site upgrade in progress...
-
-Right now the site is getting upgraded to a completely rewritten version, until then you may have to wait a while.
