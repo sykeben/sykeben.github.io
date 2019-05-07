@@ -1,6 +1,9 @@
 const pages = [
     
-    { title: "Home", link: "index.html" }
+    { title: "Home", link: "index.html" },
+    { title: "Repos", link: "repos.html"},
+    { title: "Products", link: "products.html"},
+    { title: "Resume", link: "resume.html"}
     
 ]
     
