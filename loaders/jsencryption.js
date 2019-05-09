@@ -1,11 +1,11 @@
 /*
-	JavaScript Encryption and Decryption 2.0
-	http://www.vincentcheung.ca/jsencryption/
-	
-	The backend is Gibberish AES by Mark Percival (http://github.com/markpercival/gibberish-aes/tree/master)
-	
-	Copyright 2008 Vincent Cheung
-	Dec. 16, 2008
+
+    Most other information has been obscured for security.
+    I can give this though:
+
+	The backend is by Mark Percival	
+	Written Vincent Cheung
+    
 */
 var decryptElementId;
 
