@@ -35,7 +35,7 @@ function decrypt(a) {
                 var e = GibberishAES.dec(d, a);
                 b = true;
                 c.innerHTML = e;
-                c.setAttribute("data-raw", "");
+                c.removeAttribute("data-raw");
             } catch (err) {}
         }
         if (!b) {
