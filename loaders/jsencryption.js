@@ -30,12 +30,12 @@ function decrypt(a) {
         var b = false;
         for (var i = 0; i < decryptElementId.length; i++) {
             var c = document.getElementById(decryptElementId[i]);
-            var d = c.title;
+            var d = c.getAttribute("data-raw");
             try {
                 var e = GibberishAES.dec(d, a);
                 b = true;
                 c.innerHTML = e;
-                c.title = ""
+                c.setAttribute("data-raw", "");
             } catch (err) {}
         }
         if (!b) {
