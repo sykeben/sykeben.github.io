@@ -5,6 +5,7 @@
 
 	The backend is by Mark Percival	
 	Written Vincent Cheung
+    Style modified by Ben Sykes
     
 */
 var decryptElementId;
@@ -12,7 +13,7 @@ var decryptElementId;
 function decryptText(a, b, c) {
     decryptElementId = a;
     if (b == null) {
-        b = "Enter the decryption key:"
+        b = "&nbspEnter the decryption key:"
     }
     if (c != null && c) {
         var d = prompt(b, "");
@@ -78,9 +79,9 @@ function vcCreateDialog() {
     overlayElt.setAttribute("id", "vcOverlay");
     var s = overlayElt.style;
     s.backgroundColor = "black";
-    s.MozOpacity = 0.1;
-    s.opacity = 0.1;
-    s.filter = "alpha(opacity=10)";
+    s.MozOpacity = 0.2;
+    s.opacity = 0.2;
+    s.filter = "alpha(opacity=20)";
     s.position = "fixed";
     s.top = 0;
     s.left = 0;
@@ -100,8 +101,8 @@ function vcCreateDialog() {
     s.left = 0;
     s.width = "400px";
     s.zIndex = 255;
-    s.border = "1px solid black";
     s.backgroundColor = "#fbfcfd";
+    s.borderRadius = "5px";
     s.textAlign = "left";
     s.margin = 0;
     s.padding = 0;
@@ -109,7 +110,8 @@ function vcCreateDialog() {
     var b = document.createElement("div");
     b.setAttribute("id", "vcInWin");
     s = b.style;
-    s.border = "5px solid #808080";
+    s.border = "1px solid #808080";
+    s.borderRadius = "5px";
     s.padding = "15px";
     s.margin = 0;
     winElt.appendChild(b);
@@ -118,13 +120,13 @@ function vcCreateDialog() {
     s = promptElt.style;
     s.padding = 0;
     s.margin = 0;
-    s.fontFamily = "Arial, sans-serif";
     s.fontSize = "14px";
     s.textAlign = "left";
     s.color = "black";
     b.appendChild(promptElt);
     passElt = document.createElement("input");
     passElt.setAttribute("id", "vcPass");
+    passElt.classList = ["form-control border ml-1"]
     passElt.type = "text";
     passElt.onkeydown = function (c) {
         if (c == null) {
@@ -151,11 +153,11 @@ function vcCreateDialog() {
     b.appendChild(passElt);
     var c = document.createElement("div");
     c.style.textAlign = "right";
-    c.style.fontFamily = "Arial, sans-serif";
     c.style.fontSize = "14px";
     b.appendChild(c);
     var d = document.createElement("input");
     d.type = "button";
+    d.classList = ["btn btn-sm btn-primary px-2 text-white shadow-sm"];
     d.value = "OK";
     d.onclick = function () {
         vcClick(1)
@@ -166,6 +168,7 @@ function vcCreateDialog() {
     c.appendChild(d);
     d = document.createElement("input");
     d.type = "button";
+    d.classList = ["btn btn-sm btn-primary px-2 text-white shadow-sm mr-2"];
     d.value = "Cancel";
     d.onclick = function () {
         vcClick(0)
