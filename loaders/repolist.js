@@ -47,7 +47,7 @@ setTimeout(function() {
         loader.classList.add('d-none')
         loader.removeEventListener('animationend', loaderout)
         container.classList.remove('d-none')
-        container.classList.add('animated', 'fadeIn')
+        container.classList.add('animated', 'fadeInLeft')
     }
     loader.addEventListener('animationend', loaderout)
     
