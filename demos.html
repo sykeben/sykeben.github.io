@@ -10,6 +10,7 @@
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/gradients.css">
+        <link rel="stylesheet" href="styles/cards.css">
         <link rel="stylesheet" href="styles/bootmod.css">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
@@ -17,7 +18,7 @@
     
     </head>
     
-    <body class="bg-grad-the-strain">
+    <body>
         
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow">
             
@@ -31,21 +32,33 @@
         
         </nav>
         
-        <h1 class="display-4 text-center text-white font-weight-light mt-5 pt-0 pt-md-5 animated fadeInDown delay-0p25s">
-            Coming Soon!
-        </h1>
+        <div id="list-loading" class="container-fluid row ml-n5 mt-5 pt-md-5 text-center animated fadeIn">
+            <div class="col text-right">
+                <div class="spinner-border text-dark" style="width: 3rem; height: 3rem;"></div>
+            </div>
+            <div class="col ml-n3 mt-n1 text-left">
+                <h5 class="display-5 font-weight-light">Please Wait</h5>
+                <h6 class="display-5 font-weight-lighter">Loading demos...</h6>
+            </div>
+        </div>
         
-        <p class="lead text-center text-white font-weight-lighter mt-4 mt-md-5 pt-0 pt-md-2 animated fadeInDown delay-0p75s">
-            This page is under construction.<br>
-            Come back in the future.
-        </p>
+        <div id="list-container" class="container py-3 d-none">
+            
+            <div class="px-5 mt-5 mb-5 pb-2 row lead-bigger font-weight-light col-12 animated fadeInDown">
+                The below demos are examples of what I can do with my skills.
+            </div>
+        
+            <div id="actual-list" class="row w-100 col-12 p-0 animated fadeInLeft delay-0p75s d-block"></div>
+            
+        </div>
         
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="loaders/statstats.js"></script>
+        <script src="loaders/demos.js"></script>
+        <script src="loaders/cards.js"></script>
     
     </body>
 
