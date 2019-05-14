@@ -9,7 +9,8 @@ loader.addEventListener('animationend', loaderin)
 
 var rawDemos = [
     
-    { link: 'demos/0.html', title: 'First Demo', desc: 'Test demo.' }
+    { link: 'demos/0.html', title: 'First Demo', desc: 'Test demo.' },
+    { link: 'demos/1.html', title: 'Basic Text Editor', desc: 'A simple text editor made with JS.' }
     
 ]
 
@@ -21,7 +22,7 @@ for (var rawDemoId = rawDemos.length; rawDemoId > -1; rawDemoId--) {
 for (var demoId = 0; demoId < demos.length; demoId++) {
     if (demos[demoId] !== undefined) {
         document.getElementById('actual-list').innerHTML += `
-        <div id="card-${demoId}" class="row border card-link-sm my-4 mx-5 py-3 px-4 bg-light rounded shadow-sm d-block" onclick="cardURL('${demoId}', '${demos[demoId].link}')">
+        <div id="card-${demoId}" class="row border card-link-sm mt-4 mb-5 mx-5 py-3 px-4 bg-light rounded shadow-sm d-block" onclick="cardURL('${demoId}', '${demos[demoId].link}')">
             <h1 class="display-5 font-weight-light">${demos[demoId].title}</h1>
             <p class="lead my-2">${demos[demoId].desc}</p>
         </div>`
