@@ -10,3 +10,7 @@
 .shadow-xs {
 	box-shadow: 0 .075rem .125rem rgba(0,0,0,.05) !important;
 }
+
+.font-size-half {
+    font-size-adjust: .5;
+}
