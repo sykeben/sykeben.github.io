@@ -10,7 +10,8 @@ loader.addEventListener('animationend', loaderin)
 var rawDemos = [
     
     { link: 'demos/0.html', title: 'First Demo', desc: 'Test demo.' },
-    { link: 'demos/1.html', title: 'Basic Text Editor', desc: 'A simple text editor made with JS.' }
+    { link: 'demos/1.html', title: 'Basic Text Editor', desc: 'A simple text editor made with JS.' },
+    { link: 'demos/2.html', title: 'Sentance Expander', desc: 'Meme-ify your essays!' }
     
 ]
 
