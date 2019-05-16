@@ -12,7 +12,8 @@ var rawPosts = [
     { link: 'posts/0.html', date: '5/7/19', title: 'Hello, World!', desc: 'Test post.' },
     { link: 'posts/1.html', date: '5/8/19', title: 'First Real Post', desc: 'Since the site\'s been refreshed, I can now start blogging.' },
     { link: 'posts/2.html', date: '5/8/19', title: 'Site Refresh', desc: 'After having an OK site for a while, it\'s time to restart.' },
-    { link: 'posts/3.html', date: '5/13/19', title: 'Dev for Hire', desc: 'Finally wrote my resume! Now I\'m looking for a summer job!'}
+    { link: 'posts/3.html', date: '5/13/19', title: 'Dev for Hire', desc: 'Finally wrote my resume! Now I\'m looking for a summer job!'},
+    { link: 'posts/4.html', date: '5/16/19', title: 'Project Publicity', desc: 'RasDash has been featured on the Open Source Developer Podcast!'}
     
 ]
 
