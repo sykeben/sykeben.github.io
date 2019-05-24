@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+        <title>Redirect</title>
+        
+        <style>
+            body { font-family: sans-serif; padding: 0px; margin: 0px; }
+            h1, p { font-weight: 100; margin: 10px; }
+        </style>
+    
+    </head>
+    
+    <body>
+    
+        <h1>Now redirecting...</h1>
+        <p>You will be redirected to download the latest "<span id="file">unknown</span>" file for <span id="user">unknown</span>/<span id="repo">unknown</span> in 3 seconds.</p>
+        <p>Click <a href="#" id="link">here</a> if you are not automatically redirected.</p>
+        
+        <script>
+            url = new URL(window.location.href)
+            user = url.searchParams.get('user') || 'unknown'
+            repo = url.searchParams.get('repo') || 'unknown'
+            file = url.searchParams.get('file') || 'unknown'
+            
+            document.getElementById('user').textContent = user
+            document.getElementById('repo').textContent = repo
+            document.getElementById('file').textContent = file
+            
+            newurl = `https://github.com/${user}/${repo}/releases/latest/download/${file}`
+            document.getElementById('link').href = newurl
+            
+            function gotoRelease() { window.location.href = newurl }
+
+            setTimeout(gotoRelease, 3000)
+        </script>
+    
+    </body>
+
+</html>
