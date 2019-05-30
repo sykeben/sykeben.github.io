@@ -32,7 +32,7 @@
             newurl = `https://github.com/${user}/${repo}/releases/latest/download/${file}`
             document.getElementById('link').href = newurl
             
-            function gotoRelease() { window.location.href = newurl }
+            function gotoRelease() { window.location.replace(newurl) }
 
             setTimeout(gotoRelease, 3000)
         </script>
