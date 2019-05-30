@@ -11,9 +11,9 @@ clipjs.on('success', function(e) {
 // LATEST RELEASE FILE
 
 function lrfGen() {
-    var user = $('#lrf-user').val() || '[user]'
-    var repo = $('#lrf-repo').val() || '[repo]'
-    var file = $('#lrf-file').val() || '[file]'
+    var user = encodeURIComponent($('#lrf-user').val()) || 'null'
+    var repo = encodeURIComponent($('#lrf-repo').val()) || 'null'
+    var file = encodeURIComponent($('#lrf-file').val()) || 'null'
     $('#lrf-out').text(`https://sykeben.github.io/redirect/latestdl.html?user=${user}&repo=${repo}&file=${file}`)
 }
 
