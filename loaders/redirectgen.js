@@ -1,10 +1,24 @@
-// CLIPBOARD.JS SETUP
+// "COPY" BUTTON SETUP
 
-var clipjs = new ClipboardJS('.btn')
+var copybtns = new ClipboardJS('.btn-copy')
 
-clipjs.on('success', function(e) {
+copybtns.on('success', function(e) {
     setTimeout(e.clearSelection, 100)
 })
+
+
+
+// "TRY IT" BUTTON SETUP
+
+var tryitbtns = document.getElementsByClassName('btn-tryit')
+
+for (var i=0; i<tryitbtns.length; i++) {
+    if (tryitbtns[i].getAttribute('data-tryit-target') !== null) {
+        tryitbtns[i].addEventListener('click', function(e) {
+            window.open($(this.getAttribute('data-tryit-target')).text(), '_blank')
+        })
+    }
+}
 
 
 
