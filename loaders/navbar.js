@@ -6,7 +6,8 @@ const pages = [
     { title: "Status", link: "status.html"},
     { title: "Resume", link: "resume.html"},
     { title: "Blog", link:"blog.html"},
-    { title: "Demos", link:"demos.html"}
+    { title: "Demos", link:"demos.html"},
+    { title: "Redirects", link:"redirect/index.html"}
     
 ]
     
