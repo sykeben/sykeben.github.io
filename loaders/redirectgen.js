@@ -22,6 +22,14 @@ for (var i=0; i<tryitbtns.length; i++) {
 
 
 
+// "ONUPDATE" FUNCTION
+
+function onUpdate(list, callback) {
+    for (var i=0; i<list.length; i++) { $(list[i]).on('keyup', callback) }
+}
+
+
+
 // LATEST RELEASE FILE
 
 function lrfGen() {
@@ -30,9 +38,4 @@ function lrfGen() {
     var file = encodeURIComponent($('#lrf-file').val()) || 'null'
     $('#lrf-out').text(`https://sykeben.github.io/redirect/latestdl.html?user=${user}&repo=${repo}&file=${file}`)
 }
-
-$('#lrf-user').on('keyup', lrfGen)
-$('#lrf-repo').on('keyup', lrfGen)
-$('#lrf-file').on('keyup', lrfGen)
-
-lrfGen()
+onUpdate(['#lrf-user', '#lrf-repo', '#lrf-file'], lrfGen)
