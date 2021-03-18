@@ -1,0 +1,25 @@
+/* Back Container & Button */
+#back-container {
+    display: block;
+    position: absolute;
+    padding: 0; margin: 0;
+    top: 0.25rem; left: 0.25rem;
+}
+#back-container #back-button, #back-container #back-button:visited {
+    display: block;
+    color: rgba(0, 0, 0, 0.375);
+    text-decoration: none;
+    text-shadow: 0 0.075rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+#back-container #back-button:not(:hover) {
+    animation-name: back-leave;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+}
+#back-container #back-button:hover {
+    animation-name: back-enter;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+}
+@keyframes back-enter { from { opacity: 0.25; scale: 0.875; } to { opacity: 1; scale: 1; } }
+@keyframes back-leave { from { opacity: 1; scale: 1; } to { opacity: 0.25; scale: 0.875; } }
