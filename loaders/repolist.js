@@ -7,20 +7,20 @@ function loaderin() {
 }
 loader.addEventListener('animationend', loaderin)
 
-$.getJSON('https://api.github.com/users/sykeben/repos', function(json) {
+$.getJSON(`https://api.github.com/users/sykeben/repos?accept=${encodeURIComponent("application/vnd.github.v3+json")}&sort=pushed&per_page=100&page=1`, function(json) {
     
-    var repo = []
-    for (var repoid = 0; repoid < json.length; repoid++) {
+    let repo = {};
+    for (let repoid = 0; repoid < json.length; repoid++) {
         
         repo = json[repoid]
         
-        var description = repo.description
+        let description = repo.description
         if (repo.description == null) description = '<em>No Description.</em>'
         
-        var lastupdated = new Date(repo.updated_at);
+        let lastupdated = new Date(repo.updated_at);
         
         container.innerHTML += `
-        <div class="row">
+        <div class="row animated fadeInLeft" style="animation-delay: ${repoid * 0.05}s">
             <div id="card-${repo.id}" class="col card-link-sm my-4 mx-lg-5 px-4 pt-4 pb-3 border bg-light rounded shadow-sm" onclick="cardURL('${repo.id}', '${repo.html_url.toString()}')">
 
                 <h2 class="display-5 font-weight-light">${repo.name}</h2>
@@ -35,8 +35,8 @@ $.getJSON('https://api.github.com/users/sykeben/repos', function(json) {
         </div>`
         
     }
-    
-})
+
+});
 
 setTimeout(function() {
     
