@@ -3,6 +3,7 @@ const pages = [
     { title: "Home", link: "index.html" },
     { title: "Repos", link: "repos.html"},
     { title: "Products", link: "products.html"},
+    { title: "Web Games", link: "webgames.html"},
     { title: "Status", link: "status.html"},
     { title: "Resume", link: "resume.html"},
     { title: "Blog", link:"blog.html"},
