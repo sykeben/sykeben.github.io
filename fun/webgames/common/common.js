@@ -5,6 +5,6 @@ const backLink = "../../../webgames.html";
 $(document).ready(() => {
 
     // Create back button (if applicable)
-    if ($("#back-container").length) $("#back-container").append(`<a id="back-button" href="${backLink}" tabindex="-1">&ltrif; Back</a>`);
+    if ($("#back-container").length) $("#back-container").append(`<a id="back-button" href="${backLink}" tabindex="-1">&ltrif; Home</a>`);
 
 });
