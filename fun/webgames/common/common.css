@@ -1,3 +1,12 @@
+/* Scrollbar Hider */
+body::-webkit-scrollbar {
+    display: none;
+}
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 /* Back Container & Button */
 #back-container {
     display: block;
