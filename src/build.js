@@ -53,11 +53,11 @@ fs.copySync(resourcesRoot, resourcesOutput, {
     filter: (src, dest) => {
 
         // Get stats.
-        const stats = fs.statSync(src);
-        const isFile = stats.isFile();
+        let stats = fs.statSync(src);
+        let isFile = stats.isFile();
 
         // Trim source.
-        const srcTrimmed = src.substr(resourcesRoot.length + 1);
+        let srcTrimmed = src.substr(resourcesRoot.length + 1);
 
         // Print message.
         console.log(`${emojiCheck}\t${isFile ? emojiFile : emojiFolder}${srcTrimmed}${isFile ? '' : path.sep}`);
@@ -83,11 +83,11 @@ fs.copySync(staticRoot, srcOutput, {
     filter: (src, dest) => {
 
         // Get stats.
-        const stats = fs.statSync(src);
-        const isFile = stats.isFile();
+        let stats = fs.statSync(src);
+        let isFile = stats.isFile();
 
         // Trim source.
-        const srcTrimmed = src.substr(staticRoot.length + 1);
+        let srcTrimmed = src.substr(staticRoot.length + 1);
 
         // Print message.
         console.log(`${emojiCheck}\t${isFile ? emojiFile : emojiFolder}${srcTrimmed}${isFile ? '' : path.sep}`);
@@ -104,21 +104,33 @@ console.log('3C: Rendering new dynamic page(s)...');
 klawSync(pagesRoot, { nodir: true }).forEach((object, index) => {
 
     // Get information.
-    const src = object.path;
-    const stats = object.stats;
+    let src = object.path;
+    let stats = object.stats;
 
     // Trim source.
-    const srcTrimmed = src.substr(pagesRoot.length + 1);
+    let srcTrimmed = src.substr(pagesRoot.length + 1);
 
-    // Generate output.
-    const out = path.join(pagesOutput, srcTrimmed.substr(0, srcTrimmed.length - path.extname(srcTrimmed).length) + '.html');
-    const outTrimmed = out.substr(pagesOutput.length + 1);
+    // Generate output path.
+    let out = path.join(pagesOutput, srcTrimmed.substr(0, srcTrimmed.length - path.extname(srcTrimmed).length) + '.html');
+    let outTrimmed = out.substr(pagesOutput.length + 1);
 
     // Create directory structure, if needed.
     fs.mkdirsSync(path.dirname(out));
 
+    // Generate resource path.
+    let res = '';
+    for (let i = 0; i < outTrimmed.split(path.sep).length; i++) {
+        res += '../'
+    }
+    res += 'resources'
+
     // Render page.
-    ejs.renderFile(src, {}, {
+    ejs.renderFile(src, {
+
+        // Resource root.
+        res: res
+
+    }, {
 
         // Root is source root.
         root: srcRoot,
