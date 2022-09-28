@@ -1,0 +1,8 @@
+.navbar-brand > img {
+    border-radius: 12.5%;
+    z-index: 1;
+}
+
+.navbar-brand > span {
+    z-index: 2;
+}
