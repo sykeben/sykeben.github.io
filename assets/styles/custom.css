@@ -1,7 +1,9 @@
+/* Animated Cursor */
 .anim.anim-cursor {
     animation: anim-cursor 0.75s ease-in-out infinite alternate both;
 }
 
+/* Keyframes: Animated Cursor */
 @keyframes anim-cursor {
     0% {
         opacity: 1;
