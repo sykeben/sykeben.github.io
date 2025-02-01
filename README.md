@@ -1,13 +1,23 @@
-# My Site!
+![UNDER CONSTRUCTION](banner.gif)
 
-This is my GitHub pages site! These are many others like it, but this one is personally mine.
+# 🚧 Pardon My Digital Dust! 🚧
 
-<br>
+Welcome to **sykeben.github.io**, currently undergoing a *total overhaul* because, let's be honest... the old site was held together with digital duct tape and a prayer.
 
-### Legacy Backup
-You can view the [legacy](https://github.com/sykeben/sykeben.github.io/tree/legacy) branch if you wish to explore the source for the old website.
+I'm ripping out outdated code, banishing ancient scripts, and summoning fresh, modern tech to take its place. This might take a little time, but trust me - it's better than watching a CSS file cry in the corner.
 
-<br>
+## What's Coming?
 
-### (N)ext (G)eneration
-A new version of my personal webpage is being developed under the [ng](https://github.com/sykeben/sykeben.github.io/tree/ng) branch.
+- ✅ A sleek, modern design (no more bootstrap 4!).
+- ✅ Faster load times (your browser will thank me).
+- ✅ Fewer bugs (hopefully).
+
+## In the Meantime...
+
+- 🔧 Follow my progress on [github](https://github.com/sykeben/sykeben.github.io).
+- 🛠️ Send good vibes (or coffee).
+- 📅 Check back soon - this won't take *forever*... probably.
+
+***See you on the other side! 🚀***
+
+![UNDER CONSTRUCTION](banner.gif)
