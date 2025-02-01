@@ -1,0 +1,13 @@
+.anim.anim-cursor {
+    animation: anim-cursor 0.75s ease-in-out infinite alternate both;
+}
+
+@keyframes anim-cursor {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
