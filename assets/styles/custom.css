@@ -1,3 +1,13 @@
+/* Business Card */
+.card.biz-card {
+    max-width: 32rem;
+}
+
+.card.biz-card .biz-img {
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Active Nav Link */
 .nav-link.active {
     text-decoration: underline;
@@ -8,7 +18,6 @@
     animation: anim-cursor 0.75s ease-in-out infinite alternate both;
 }
 
-/* Keyframes: Animated Cursor */
 @keyframes anim-cursor {
     0% {
         opacity: 1;
