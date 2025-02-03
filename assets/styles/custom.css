@@ -1,11 +1,38 @@
 /* Business Card */
 .card.biz-card {
     max-width: 32rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card.biz-card .row {
+    width: 100%;
+}
+
+.card.biz-card .col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
 }
 
 .card.biz-card .biz-img {
-    height: 100%;
     object-fit: cover;
+    height: auto;
+    max-height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+    .card.biz-card {
+        flex-direction: column;
+    }
+
+    .card.biz-card .col-md-4,
+    .card.biz-card .col-md-8 {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* Active Nav Link */
