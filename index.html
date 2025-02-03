@@ -1,70 +1,186 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metadata -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home &bull; SykeBen</title>
 
-    <title>Under Construction</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/branding/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/branding/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/branding/favicon-16x16.png" />
+    <link rel="manifest" href="/assets/branding/site.webmanifest" />
 
-    <style>
-        body {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            max-width: 8in;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    <!-- Bootstrap Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous" />
 
-        img.banner {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        h1.title, p.signoff {
-            text-align: center;
-        }
-    </style>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/assets/styles/custom.css" />
 
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100" data-bs-theme="dark">
 
-    <img class="banner" src="banner.gif" alt="UNDER CONSTRUCTION" />
-    <h1 class="title" id="-pardon-my-digital-dust-">🚧 Pardon My Digital Dust! 🚧</h1>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg shadow-sm sticky-top bg-black">
+        <div class="container-fluid">
 
-    <p>
-        Welcome to <strong>sykeben.github.io</strong>, currently undergoing a <em>total overhaul</em> because, let's
-        be honest... the old site was held together with digital duct tape and a prayer.
-    </p>
+            <!-- Branding -->
+            <a class="navbar-brand" href="/">
+                <img src="/assets/branding/logo.png" alt="Logo" width="24" height="24" loading="eager"
+                    class="rounded d-inline-block align-text-top border border-light-subtle">
+                SykeBen
+            </a>
 
-    <p>
-        I'm ripping out outdated code, banishing ancient scripts, and summoning fresh, modern tech to take its place.
-        This might take a little time, but trust me - it's better than watching a CSS file cry in the corner.
-    </p>
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <h2 id="what-s-coming-">What's Coming?</h2>
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/galleries/">Galleries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+                </ul>
+            </div>
 
-    <ul>
-        <li>✅ A sleek, modern design (no more bootstrap 4!).</li>
-        <li>✅ Faster load times (your browser will thank me).</li>
-        <li>✅ Fewer bugs (hopefully).</li>
-    </ul>
+        </div>
+    </nav>
 
-    <h2 id="in-the-meantime-">In the Meantime...</h2>
+    <!-- Hero Header -->
+    <header class="text-center py-4 py-lg-5 bg-black shadow">
+        <div class="container">
 
-    <ul>
-        <li>🔧 Follow my progress on <a href="https://github.com/sykeben/sykeben.github.io" target="_blank">github</a>.</li>
-        <li>🛠️ Send good vibes (or coffee).</li>
-        <li>📅 Check back soon - this won't take <em>forever</em>... probably.</li>
-    </ul>
+            <!-- Greeting -->
+            <h1 class="display-1 fw-bold font-monospace">
+                Hello, World!&NoBreak;<span class="anim anim-cursor">&block;</span>
+            </h1>
 
-    <p class="signoff">
-        <strong><em>See you on the other side! 🚀</em></strong>
-    </p>
+            <!-- Tagline -->
+            <p class="lead">
+                I'm Ben Sykes, an electrical engineer with a knack for software development and photography.
+            </p>
 
-    <img class="banner" src="banner.gif" alt="UNDER CONSTRUCTION" />
+        </div>
+    </header>
+
+    <!-- Content Cards -->
+    <section class="container mt-3 mt-md-4 mt-lg-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-2 g-md-3 g-lg-4">
+
+            <!-- About -->
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-person"></i> About Me
+                        </h5>
+                        <p class="card-text">
+                            I enjoy solving complex problems with technology and capturing the world through my camera
+                            lens.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/about/" class="btn btn-dark shadow-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-code-slash"></i> My Projects
+                        </h5>
+                        <p class="card-text">
+                            Explore the projects I've built or contributed to, including open-source software, embedded
+                            systems, and technical innovations.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/projects/" class="btn btn-dark shadow-sm">See My Work</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galleries -->
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-images"></i> Photo Galleries
+                        </h5>
+                        <p class="card-text">
+                            View my collection of hobbyist photography, featuring landscapes, abstracts, and other
+                            subject matter.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/galleries/" class="btn btn-dark shadow-sm">View My Photos</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog -->
+            <div class="col">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-chat-left-quote"></i> Blog Posts
+                        </h5>
+                        <p class="card-text">
+                            Check out my blog where I share insights on everything from engineering to artistic
+                            photography.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/blog/" class="btn btn-dark shadow-sm">Read My Blog</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto">
+        <div class="bg-black shadow-sm mt-3 mt-md-4 mt-lg-5 py-2 py-md-3">
+            <div class="container text-body-secondary">
+                <div class="row row-cols-1 row-cols-md-2 g-2 g-md-3">
+
+                    <!-- Copyright -->
+                    <div class="col-md-auto me-md-auto">
+                        &copy; 2025 - Benjamin Sykes
+                    </div>
+
+                    <!-- License -->
+                    <div class="col-md-auto">
+                        This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International
+                        License.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
 </body>
 

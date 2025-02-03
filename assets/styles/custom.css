@@ -1,0 +1,51 @@
+/* Business Card */
+.card.biz-card {
+    max-width: 32rem;
+}
+
+.card.biz-card .biz-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Active Nav Link */
+.nav-link.active {
+    text-decoration: underline;
+}
+
+/* Text Shadows */
+.text-shadow {
+    text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-inverse {
+    text-shadow: 0 0 0.5em rgba(255, 255, 255, 0.5);
+}
+
+/* Indented Text */
+.text-indent {
+    text-indent: 2.5em;
+}
+
+/* Animated Cursor */
+.anim.anim-cursor {
+    animation: anim-cursor 0.75s ease-in-out infinite alternate both;
+}
+
+@keyframes anim-cursor {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

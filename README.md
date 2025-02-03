@@ -1,23 +1,28 @@
-![UNDER CONSTRUCTION](banner.gif)
+# sykeben.github.io
 
-# 🚧 Pardon My Digital Dust! 🚧
+Welcome to the source tree for my personal website!
 
-Welcome to **sykeben.github.io**, currently undergoing a *total overhaul* because, let's be honest... the old site was held together with digital duct tape and a prayer.
+## 🌐 Live Site
 
-I'm ripping out outdated code, banishing ancient scripts, and summoning fresh, modern tech to take its place. This might take a little time, but trust me - it's better than watching a CSS file cry in the corner.
+You can view the **live master** through GitHub Pages:  
+🔗 [sykeben.github.io](https://sykeben.github.io)
 
-## What's Coming?
+## 📖 About
 
-- ✅ A sleek, modern design (no more bootstrap 4!).
-- ✅ Faster load times (your browser will thank me).
-- ✅ Fewer bugs (hopefully).
+This repository contains the source tree and raw content for my personal website, showcasing my work, projects, and interests.
 
-## In the Meantime...
+## ⚖️ License
 
-- 🔧 Follow my progress on [github](https://github.com/sykeben/sykeben.github.io).
-- 🛠️ Send good vibes (or coffee).
-- 📅 Check back soon - this won't take *forever*... probably.
+The content of this repository (and thus the live website) is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** license.
 
-***See you on the other side! 🚀***
+This means you are **free to share and adapt** the material **for non-commercial purposes**, as long as you provide appropriate credit (please don't just steal my work).
 
-![UNDER CONSTRUCTION](banner.gif)
+For full details, see the [LICENSE](LICENSE) file or visit [Creative Commons](https://creativecommons.org/licenses/by-nc/4.0/).
+
+## 💬 Contributions
+
+This is a purely personal project, so **don't worry too much about reaching out**. However, if you have any good suggestions or spot any serious issues, feel free to open an issue.
+
+---
+
+© 2025 Benjamin Sykes
