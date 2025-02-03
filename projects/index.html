@@ -60,6 +60,111 @@
         </div>
     </nav>
 
+    <!-- Carousel -->
+    <section class="container mt-3 mt-md-4 mt-lg-5 px-lg-5">
+        <div id="featuredCarousel" class="carousel slide mx-lg-5 shadow">
+
+            <!-- Items -->
+            <div class="carousel-inner">
+
+                <!-- RasDash -->
+                <div class="carousel-item active">
+                    <img src="/assets/screenshots/rasdash.png" class="d-block w-100" alt="RasDash">
+                    <div class="carousel-caption d-none d-md-block text-danger text-shadow">
+                        <h5><i class="bi bi-pie-chart"></i> RasDash</h5>
+                        <p>A Raspberry Pi dashboard built on NodeJS.</p>
+                    </div>
+                </div>
+
+                <!-- BITS-PyOS -->
+                <div class="carousel-item">
+                    <img src="/assets/screenshots/bits-pyos.png" class="d-block w-100" alt="BITS-PyOS">
+                    <div class="carousel-caption d-none d-md-block text-warning text-shadow-inverse">
+                        <h5><i class="bi bi-filetype-py"></i> BITS-PyOS</h5>
+                        <p>The BIOS-Implementation-Test-Suite-Based Python Operating System.</p>
+                    </div>
+                </div>
+
+                <!-- VirtualPCStatus -->
+                <div class="carousel-item">
+                    <img src="/assets/screenshots/virtualpcstatus.png" class="d-block w-100" alt="VirtualPCStatus">
+                    <div class="carousel-caption d-none d-md-block text-white text-shadow">
+                        <h5><i class="bi bi-windows"></i> VirtualPCStatus</h5>
+                        <p>An AutoHotkey 2.0 script to add a Virtual PC status icon to the tray.</p>
+                    </div>
+                </div>
+
+                <!-- PylapseNG -->
+                <div class="carousel-item">
+                    <img src="/assets/screenshots/pylapseng.png" class="d-block w-100" alt="PylapseNG">
+                    <div class="carousel-caption d-none d-md-block text-white text-shadow">
+                        <h5><i class="bi bi-camera-reels"></i> PylapseNG</h5>
+                        <p>A hyper-minimal, hyper-portable time-lapse recording utility.</p>
+                    </div>
+                </div>
+
+                <!-- Fullscreens -->
+                <div class="carousel-item">
+                    <img src="/assets/screenshots/fullscreens.png" class="d-block w-100" alt="Fullscreens">
+                    <div class="carousel-caption d-none d-md-block text-success-emphasis text-shadow">
+                        <h5><i class="bi bi-fullscreen"></i> Fullscreens</h5>
+                        <p>A collection of helpful fullscreen web apps.</p>
+                    </div>
+                </div>
+
+                <!-- Scratchpad -->
+                <div class="carousel-item">
+                    <img src="/assets/screenshots/scratchpad.png" class="d-block w-100" alt="Scratchpad">
+                    <div class="carousel-caption d-none d-md-block text-info text-shadow-inverse">
+                        <h5><i class="bi bi-pencil-square"></i> Scratchpad</h5>
+                        <p>A lightweight text editor for the browser.</p>
+                    </div>
+                </div>
+
+                <!-- BookJS -->
+                <div class="carousel-item">
+                    <img src="/assets/screenshots/bookjs.png" class="d-block w-100" alt="BookJS">
+                    <div class="carousel-caption d-none d-md-block text-primary text-shadow">
+                        <h5><i class="bi bi-book"></i> BookJS</h5>
+                        <p>A lightweight text editor for the browser.</p>
+                    </div>
+                </div>
+
+                <!-- BlueDashPro -->
+                <div class="carousel-item">
+                    <img src="/assets/screenshots/bluedashpro.png" class="d-block w-100" alt="BlueDashPro">
+                    <div class="carousel-caption d-none d-md-block text-black text-shadow-inverse">
+                        <h5><i class="bi bi-speedometer2"></i> BlueDashPro</h5>
+                        <p>A big-screen FRC pit lane dashboard.</p>
+                    </div>
+                </div>
+
+                <!-- BlueDashProII -->
+                <div class="carousel-item">
+                    <img src="/assets/screenshots/bluedashproii.png" class="d-block w-100" alt="BlueDashProII">
+                    <div class="carousel-caption d-none d-md-block text-warning text-shadow-inverse">
+                        <h5><i class="bi bi-speedometer"></i> BlueDashPro&#8545;</h5>
+                        <p>The successor to BlueDashPro.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Previous Button -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <!-- Next Button -->
+            <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+        </div>
+    </section>
+
     <!-- Cards -->
     <section class="container mt-3 mt-md-4 mt-lg-5">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 g-md-4">
@@ -176,21 +281,19 @@
                 </div>
             </div>
 
-            <!-- BlueDash -->
+            <!-- BookJS -->
             <div class="col">
                 <div class="card h-100 shadow">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <i class="bi bi-thermometer-half"></i> BlueDash
+                            <i class="bi bi-book"></i> BookJS
                         </h5>
                         <p class="card-text">
-                            Dual-Screen BlueAlliance Web Dashboard to use on displays in front of FRC pits. This is
-                            alpha software and has been succeeded by BlueDashPro.
+                            A conceptually-complete NodeJS server built to easily host web books formatted in JSON and EJS.
                         </p>
                     </div>
                     <div class="card-footer">
-                        <a href="https://github.com/sykeben/BlueDash" target="_blank" class="btn btn-dark">Code</a>
-                        <a href="https://sykeben.github.io/BlueDash" target="_blank" class="btn btn-dark">Website</a>
+                        <a href="https://github.com/sykeben/BookJS" target="_blank" class="btn btn-dark">Code</a>
                     </div>
                 </div>
             </div>
@@ -203,8 +306,7 @@
                             <i class="bi bi-speedometer2"></i> BlueDashPro
                         </h5>
                         <p class="card-text">
-                            The new, completely rewritten version of BlueDash. This has also been succeeded by an even
-                            newer project, BlueDashProII.
+                            Dual-Screen BlueAlliance Web Dashboard to use on displays in front of FRC pits.
                         </p>
                     </div>
                     <div class="card-footer">
@@ -219,11 +321,11 @@
                 <div class="card h-100 shadow">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <i class="bi bi-speedometer"></i> BlueDashProII
+                            <i class="bi bi-speedometer"></i> BlueDashPro&#8545;
                         </h5>
                         <p class="card-text">
-                            A successor to BlueDashPro, a dashboard for viewing FRC match results. This is a ground-up
-                            rebuild of the BlueDash concept in its most polished form.
+                            A successor to BlueDashPro. This is a ground-up rebuild of the BlueDash concept in its most
+                            polished form.
                         </p>
                     </div>
                     <div class="card-footer">
