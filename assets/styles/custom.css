@@ -13,6 +13,11 @@
     text-decoration: underline;
 }
 
+/* Indented Text */
+.text-indent {
+    text-indent: 2.5em;
+}
+
 /* Animated Cursor */
 .anim.anim-cursor {
     animation: anim-cursor 0.75s ease-in-out infinite alternate both;
