@@ -69,11 +69,6 @@
     text-shadow: 0 0 0.5em rgba(255, 255, 255, 0.5);
 }
 
-/* Indented Text */
-.text-indent {
-    text-indent: 2.5em;
-}
-
 /* Animated Cursor */
 .anim.anim-cursor {
     animation: anim-cursor 0.75s ease-in-out infinite alternate both;
