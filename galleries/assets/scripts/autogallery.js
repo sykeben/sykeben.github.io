@@ -12,7 +12,7 @@ function generateGallery() {
     const size = parseInt(gallery.getAttribute("data-gallery-size"), 10);
 
     // Get base URL.
-    const baseURL = `/assets/photos/${set}`;
+    const baseURL = `assets/sets/${set}`;
 
     // Generate elements.
     for (let index = 1; index <= size; index++) {
