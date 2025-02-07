@@ -6,7 +6,7 @@
     <!-- Metadata -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>View Gallery &bull; SykeBen</title>
+    <title>Purdue From My Perspective &bull; Galleries &bull; SykeBen</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/branding/apple-touch-icon.png" />
@@ -48,7 +48,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/galleries/">
+                        <a class="nav-link" href=".">
                             <i class="bi bi-chevron-left"></i> Back to Galleries
                         </a>
                     </li>
@@ -60,15 +60,16 @@
 
     <!-- Gallery Grid -->
     <section class="container mt-3 mt-md-4 mt-lg-5">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-1 g-sm-2 g-md-3 g-xl-4" id="gallery">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-1 g-sm-2 g-md-3 g-xl-4" id="gallery"
+            data-gallery-set="pfmp" data-gallery-size="40">
         </div>
     </section>
 
     <!-- Gallery Item Template -->
     <template id="gallery-item">
         <div class="col align-self-center">
-            <a class="gallery-link" data-toggle="lightbox" data-gallery="gallery">
-                <img class="gallery-img img-fluid border border-dark-subtle rounded shadow album-img">
+            <a class="gallery-link" data-toggle="lightbox" data-gallery="auto-gallery">
+                <img class="gallery-img img-fluid border border-dark-subtle rounded shadow album-img" loading="lazy">
             </a>
         </div>
     </template>
@@ -95,6 +96,11 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-secondary btn-back2top shadow-sm rounded-circle position-fixed" title="Jump to Top">
+        <i class="bi bi-chevron-double-up"></i>
+    </a>
+
     <!-- Bootstrap Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -106,7 +112,7 @@
         crossorigin="anonymous"></script>
 
     <!-- Custom Scripts -->
-    <script src="/assets/scripts/autogallery.js"></script>
+    <script src="assets/scripts/autogallery.js"></script>
 
 </body>
 

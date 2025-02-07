@@ -69,10 +69,19 @@
     text-shadow: 0 0 0.5em rgba(255, 255, 255, 0.5);
 }
 
-/* Indented Text */
-.text-indent {
-    text-indent: 2.5em;
+/* Back to Top Button */
+.btn-back2top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1000;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    line-height: 2.125rem;
+    margin: 0;
+    padding: auto;
 }
+
 
 /* Animated Cursor */
 .anim.anim-cursor {
