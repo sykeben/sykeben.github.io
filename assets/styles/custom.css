@@ -50,6 +50,11 @@
     filter: blur(0.075rem) brightness(0.75);
 }
 
+/* Lightbox Backdrop */
+.lightbox .carousel-item .ratio {
+    background-color: var(--bs-dark) !important;
+}
+
 /* Active Nav Link */
 .nav-link.active {
     text-decoration: underline;

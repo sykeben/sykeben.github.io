@@ -6,7 +6,7 @@
     <!-- Metadata -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Galleries &bull; SykeBen</title>
+    <title>View Gallery &bull; SykeBen</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/branding/apple-touch-icon.png" />
@@ -47,41 +47,30 @@
             <!-- Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/galleries/">Galleries</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/galleries/">
+                            <i class="bi bi-chevron-left"></i> Back to Galleries
+                        </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
                 </ul>
             </div>
 
         </div>
     </nav>
 
-    <!-- Cards -->
+    <!-- Gallery Grid -->
     <section class="container mt-3 mt-md-4 mt-lg-5">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 g-md-4">
-
-            <!-- PFMP -->
-            <div class="col">
-                <div class="card h-100 clickable album-card shadow text-white text-shadow">
-                    <img src="/assets/photos/pfmp/40.webp" class="card-img cover-img" alt="Cover Image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">
-                            Purdue From My Perspective
-                        </h5>
-                        <p class="card-text">
-                            A meticulously selected collection of 40 images capturing Purdue's West Lafayette campus from my perspective as an electrical engineer.
-                        </p>
-                        <a href="/galleries/view.html?set=pfmp&size=40" class="stretched-link"></a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 g-2 g-md-3 g-xl-4" id="gallery"></div>
     </section>
+
+    <!-- Gallery Item Template -->
+    <template id="gallery-item">
+        <div class="col align-self-center">
+            <a class="gallery-link" data-toggle="lightbox" data-gallery="gallery">
+                <img class="gallery-img img-fluid border border-dark-subtle rounded shadow album-img">
+            </a>
+        </div>
+    </template>
 
     <!-- Footer -->
     <footer class="mt-auto">
@@ -109,6 +98,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <!-- Lightbox Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"
+        integrity="sha384-398tSLFroXk6zOeoF9IVCUMWfvh8X0em06V+Okl8ysVHl2xOCqZNylGT5tps1O0Y"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom Scripts -->
+    <script src="/assets/scripts/autogallery.js"></script>
 
 </body>
 
