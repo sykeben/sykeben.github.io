@@ -1,3 +1,8 @@
+/* Clickable Element */
+.clickable {
+    cursor: pointer;
+}
+
 /* Business Card */
 .card.biz-card {
     max-width: 32rem;
@@ -33,6 +38,21 @@
         width: 100%;
         text-align: center;
     }
+}
+
+/* Album Card */
+.card.album-card {
+    overflow: hidden;
+}
+
+.card.album-card .cover-img {
+    object-fit: cover;
+    filter: blur(0.075rem) brightness(0.75);
+}
+
+/* Lightbox Backdrop */
+.lightbox .carousel-item .ratio {
+    background-color: var(--bs-dark) !important;
 }
 
 /* Active Nav Link */
