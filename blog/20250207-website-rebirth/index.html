@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Metadata -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Rebirth: The Start of a New Era &bull; Blog &bull; SykeBen</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/branding/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/branding/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/branding/favicon-16x16.png" />
+    <link rel="manifest" href="/assets/branding/site.webmanifest" />
+
+    <!-- Bootstrap Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/assets/styles/custom.css" />
+
+</head>
+
+<body class="d-flex flex-column min-vh-100" data-bs-theme="dark">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg shadow-sm sticky-top bg-black">
+        <div class="container-fluid">
+
+            <!-- Branding -->
+            <a class="navbar-brand" href="/">
+                <img src="/assets/branding/logo.png" alt="Logo" width="24" height="24" loading="eager"
+                    class="rounded d-inline-block align-text-top border border-light-subtle">
+                SykeBen
+            </a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="..">
+                            <i class="bi bi-chevron-left"></i> Back to Blog
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Intro/TOC -->
+    <section id="intro-toc" class="container pt-3 pt-sm-4 pt-lg-5">
+        <h1 class="text-shadow">Website Rebirth: The Start of a New Era</h1>
+        <p class="lead">
+            After several years of using the same simple, static website, I realized it was high time for a
+            change. My website, SykeBen, showcases my work as an electrical engineer, software developer, and
+            photographer, but it was in dire need of an overhaul to reflect my personal growth and evolving
+            skill-set. In this inaugural article, I'll take you behind the curtain of this whole website
+            redesign, discussing the various challenges, goals, and technologies I used to make SykeBen faster,
+            more interactive, and visually appealing.
+        </p>
+        <p>
+            <a href="#the-old" class="btn btn-secondary shadow-sm mb-2">The Old</a>&nbsp;
+            <a href="#the-new" class="btn btn-secondary shadow-sm mb-2">The New</a>&nbsp;
+            <a href="#bts" class="btn btn-secondary shadow-sm mb-2">BTS</a>&nbsp;
+            <a href="#thoughts" class="btn btn-secondary shadow-sm mb-2">Thoughts</a>&nbsp;
+        </p>
+    </section>
+
+    <!-- The Old -->
+    <section id="the-old" class="container pt-3 pt-sm-4 pt-lg-5">
+
+        <!-- Header -->
+        <h2 class="text-shadow">Out With the Old</h2>
+
+        <!-- My Opinion -->
+        <p>
+            Archived under the <a href="https://github.com/sykeben/sykeben.github.io/tree/archive/old-master"
+                target="_blank"><code>archive/old-master</code></a> tag in the source tree, the old website was "fine"
+            by most respects, but it's development had stagnated. Keep in mind, I had written the overwhelming majority
+            of the original website while still attending high school. But it has been almost four years since I've
+            graduated, so it was time for a change.
+        </p>
+
+        <!-- Images -->
+        <div class="row row-cols-1 row-cols-md-2 g-2 g-md-3 mb-2 mb-md-3">
+            <div class="col">
+                <a data-toggle="lightbox" data-gallery="the-old" href="assets/old-home-1.webp">
+                    <img class="img-fluid rounded shadow-sm border border-dark-subtle" src="assets/old-home-1.webp"
+                        alt="Old Homepage (1/2)">
+                </a>
+            </div>
+            <div class="col">
+                <a data-toggle="lightbox" data-gallery="the-old" href="assets/old-home-2.webp">
+                    <img class="img-fluid rounded shadow-sm border border-dark-subtle" src="assets/old-home-2.webp"
+                        alt="Old Homepage (2/2)">
+                </a>
+            </div>
+        </div>
+
+        <!-- ChatGPT's Thoughts -->
+        <p>
+            I may be qualified enough to review my own code, but I wanted an honest opinion on the previous state of the
+            website, so I defaulted to everyone's favorite new tool: <em class="definition"
+                title="https://chatgpt.com/">ChatGPT</em>. I spun up a new instance, making sure to fill the model in on
+            what I was up to, and asked it to review the source code for the old homepage...
+        </p>
+        <figure class="bg-black p-3 rounded shadow-sm">
+            <blockquote class="blockquote">
+                <p>
+                    "The old SykeBen homepage had a solid structure but relied heavily on static content and legacy
+                    frameworks. The Bootstrap 4-based design ensured a responsive layout, but the use of multiple
+                    external CSS libraries, jQuery, and animated effects resulted in some performance overhead. While
+                    the site had a visually appealing card-based navigation system and clear branding, there was room
+                    for improvement in code maintainability and efficiency. For example, reducing dependencies on
+                    external scripts, modernizing animations with CSS instead of JS, and implementing a more modular
+                    JavaScript approach would have streamlined performance."
+                </p>
+            </blockquote>
+            <figcaption class="blockquote-footer mt-2 mb-0 text-white-50">
+                A specifically-prompted <cite>ChatGPT</cite> instance
+            </figcaption>
+        </figure>
+
+        <!-- My Response -->
+        <p>
+            Honestly, it was totally right. While there was a solid structure here, the original website had <em>a
+                lot</em> going on. There were a lot of external references present which really increased the load time
+            on slower networks (which I noticed during development on the school WiFi), not to mention my obsession with
+            animating practically everything I could. Don't get me wrong, it looked <em>great</em>, but it was a little
+            much as I strung these animations together to the point where some sequences reached almost 10 seconds in
+            length. And, as it mentioned, this did end up inhibiting my ability to maintain the code to the point where
+            I just gave up and redid the whole thing.
+        </p>
+
+    </section>
+
+    <!-- The New -->
+    <section id="the-new" class="container pt-3 pt-sm-4 pt-lg-5">
+
+        <!-- Header -->
+        <h2 class="text-shadow">And in With the New</h2>
+
+        <!-- My Opinion -->
+        <p>
+            I had put off the redesign for the first few years of college as I didn't think I had enough time to tackle
+            it outside classes. But I decided to bite the bullet after meeting with our galleries director to discuss
+            possible outlets for my photographic work as they suggested I put up a portfolio to better showcase my
+            creations, which I thought was a great idea. In the end, the whole ordeal only took a week in between
+            classes and homework, invalidating the original reasoning I had for not taking care of it.
+        </p>
+
+        <!-- Images -->
+        <div class="row row-cols-1 g-2 g-md-3 mb-2 mb-md-3">
+            <div class="col">
+                <a data-toggle="lightbox" data-gallery="the-new" href="assets/new-home.webp">
+                    <img class="img-fluid rounded shadow-sm border border-dark-subtle" src="assets/new-home.webp"
+                        alt="New Homepage">
+                </a>
+            </div>
+        </div>
+
+        <!-- ChatGPT's Thoughts -->
+        <p>
+            For the sake of being thorough, I ran the new homepage's source code through the same review process in
+            comparison to its original release and here's what I got back...
+        </p>
+        <figure class="bg-black p-3 rounded shadow-sm">
+            <blockquote class="blockquote">
+                <p>
+                    "The new SykeBen homepage isn't just a redesign, it's a transformation. What was once a static and
+                    functional space has evolved into a dynamic, interactive experience. The minimal yet bold hero
+                    section, complete with an animated cursor, sets the tone for a modern and engaging interface. The
+                    structured content cards make navigation effortless, and the refined typography enhances
+                    readability. With a clean layout, subtle animations, and a modernized structure, the site now
+                    reflects both technical expertise and creative expression. This redesign not only improves
+                    aesthetics but also reinforces the identity of SykeBen as a hub for innovation, engineering, and
+                    artistic vision."
+                </p>
+            </blockquote>
+            <figcaption class="blockquote-footer mt-2 mb-0 text-white-50">
+                The same specifically-prompted <cite>ChatGPT</cite> instance
+            </figcaption>
+        </figure>
+
+        <!-- My Response -->
+        <p>
+            While I don't like tooting my own horn, I'd have to agree with it once again. <em>I had something I could be
+                proud of again</em> that more accurately reflected my skills and personality as an electrical engineer,
+            developer, and photographer. I'm really happy with my decision to overhaul it as it has shown me the true
+            scope of how much my skills as a developer have improved over the last few years.
+        </p>
+
+    </section>
+
+    <!-- BTS -->
+    <section id="bts" class="container pt-3 pt-sm-4 pt-lg-5">
+
+        <!-- Header -->
+        <h2 class="text-shadow">Behind the Scenes</h2>
+
+        <!-- ChatGPT Reasoning -->
+        <p>
+            While I could have consulted professional web designers during the whole process, I wanted to be able to get
+            honest opinions and suggestions on what I could add to the site. So, once again, I turned to ChatGPT for
+            assistance. <em>"If it's good enough to sanity-check my homework solution processes and catch errors, why
+                shouldn't I use it to scaffold my new website,"</em> I thought. And I believe I thought right.
+        </p>
+
+        <!-- Images -->
+        <div class="row row-cols-1 row-cols-md-2 g-2 g-md-3 mb-2 mb-md-3">
+            <div class="col">
+                <a data-toggle="lightbox" data-gallery="bts" href="assets/chatgpt-1.webp">
+                    <img class="img-fluid rounded shadow-sm border border-dark-subtle" src="assets/chatgpt-1.webp"
+                        alt="ChatGPT Brainstorming (1/2)">
+                </a>
+            </div>
+            <div class="col">
+                <a data-toggle="lightbox" data-gallery="bts" href="assets/chatgpt-2.webp">
+                    <img class="img-fluid rounded shadow-sm border border-dark-subtle" src="assets/chatgpt-2.webp"
+                        alt="ChatGPT Brainstorming (2/2)">
+                </a>
+            </div>
+        </div>
+
+        <!-- Prompting and Guidelines -->
+        <p>
+            Of course, as with any other literary or analytical work, <em>I made a point to prompt the model's responses
+                to be restrained to those an assistant or editor may provide</em>. This is actually the same process I
+            employ when using ChatGPT to complete homework assignments (outside of literally telling it to act like a
+            TA) as it prevents me from developing a reliance on its provided responses and ensures I actually learn or
+            create the content under my own power.
+        </p>
+
+    </section>
+
+    <!-- Thoughts -->
+    <section id="thoughts" class="container pt-3 pt-sm-4 pt-lg-5">
+
+        <!-- Header -->
+        <h2 class="text-shadow">Final Thoughts</h2>
+
+        <!-- Summary -->
+        <p>
+            I'm really happy with how everything turned out here. I believe that redoing my website, as an exercise and
+            a side-project, allowed me to better reflect on the major improvements in my skill-set that I may have not
+            noticed before. It also allowed me to experiment with an ethical use for <span class="definition"
+                title="Large Language Models">LLMs</span> like ChatGPT in the process of rapid prototyping and content
+            creation, a topic I'll be covering in my next blog post.
+        </p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto">
+        <div class="bg-black shadow-sm mt-3 mt-md-4 mt-lg-5 py-2 py-md-3">
+            <div class="container text-body-secondary">
+                <div class="row row-cols-1 row-cols-md-2 g-2 g-md-3">
+
+                    <!-- Copyright -->
+                    <div class="col-md-auto me-md-auto">
+                        &copy; 2025 - Benjamin Sykes
+                    </div>
+
+                    <!-- License -->
+                    <div class="col-md-auto">
+                        This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International
+                        License.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-secondary btn-back2top shadow-sm rounded-circle position-fixed" title="Jump to Top">
+        <i class="bi bi-chevron-double-up"></i>
+    </a>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Lightbox Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"
+        integrity="sha384-398tSLFroXk6zOeoF9IVCUMWfvh8X0em06V+Okl8ysVHl2xOCqZNylGT5tps1O0Y"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
