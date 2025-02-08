@@ -6,7 +6,7 @@
     <!-- Metadata -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Purdue From My Perspective &bull; Galleries &bull; SykeBen</title>
+    <title>Website Rebirth: The Start of a New Era &bull; Blog &bull; SykeBen</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/branding/apple-touch-icon.png" />
@@ -48,8 +48,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href=".">
-                            <i class="bi bi-chevron-left"></i> Back to Galleries
+                        <a class="nav-link" href="..">
+                            <i class="bi bi-chevron-left"></i> Back to Blog
                         </a>
                     </li>
                 </ul>
@@ -58,21 +58,27 @@
         </div>
     </nav>
 
-    <!-- Gallery Grid -->
-    <section class="container mt-3 mt-md-4 mt-lg-5">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-1 g-sm-2 g-md-3 g-xl-4" id="gallery"
-            data-gallery-set="pfmp" data-gallery-size="40">
-        </div>
+    <!-- Intro/TOC -->
+    <section id="intro-toc" class="container pt-3 pt-sm-4 pt-lg-5">
+        <h1 class="text-shadow">Website Rebirth: The Start of a New Era</h1>
+        <p class="lead">
+            After several years of using the same simple, static website, I realized it was high time for a
+            change. My website, SykeBen, showcases my work as an electrical engineer, software developer, and
+            photographer, but it was in dire need of an overhaul to reflect my personal growth and evolving
+            skill-set. In this inaugural article, I'll take you behind the curtain of this whole website
+            redesign, discussing the various challenges, goals, and technologies I used to make SykeBen faster,
+            more interactive, and visually appealing.
+        </p>
+        <a href="#old" class="btn btn-secondary shadow-sm mb-2">The Old</a>&nbsp;
     </section>
 
-    <!-- Gallery Item Template -->
-    <template id="gallery-item">
-        <div class="col align-self-center">
-            <a class="gallery-link" data-toggle="lightbox" data-gallery="auto-gallery">
-                <img class="gallery-img img-fluid border border-dark-subtle rounded shadow album-img" loading="lazy">
-            </a>
-        </div>
-    </template>
+    <!-- The Old -->
+    <section id="old" class="container pt-3 pt-sm-4 pt-lg-5">
+        <h2 class="text-shadow">The Old</h2>
+        <p>
+            Archived under the <a href="https://github.com/sykeben/sykeben.github.io/tree/archive/old-master" target="_blank"><code>archive/old-master</code></a> tag in the source tree, the old website was "fine" by most respects, but I believed it was getting long in the tooth. 
+        </p>
+    </section>
 
     <!-- Footer -->
     <footer class="mt-auto">
@@ -105,14 +111,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
-    <!-- Lightbox Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"
-        integrity="sha384-398tSLFroXk6zOeoF9IVCUMWfvh8X0em06V+Okl8ysVHl2xOCqZNylGT5tps1O0Y"
-        crossorigin="anonymous"></script>
-
-    <!-- Custom Scripts -->
-    <script src="assets/scripts/autogallery.js"></script>
 
 </body>
 

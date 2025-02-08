@@ -8,11 +8,10 @@ function generateGallery() {
     const template = document.getElementById("gallery-item");
 
     // Get attributes.
-    const set = gallery.getAttribute("data-gallery-set").replace(/[^\w]/g, "-");
     const size = parseInt(gallery.getAttribute("data-gallery-size"), 10);
 
     // Get base URL.
-    const baseURL = `assets/sets/${set}`;
+    const baseURL = 'assets';
 
     // Generate elements.
     for (let index = 1; index <= size; index++) {
