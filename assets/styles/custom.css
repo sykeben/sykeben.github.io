@@ -3,6 +3,11 @@
     cursor: pointer;
 }
 
+/* Definition Text */
+.definition {
+    text-decoration: dotted underline;
+}
+
 /* Business Card */
 .card.biz-card {
     max-width: 32rem;
