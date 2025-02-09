@@ -74,10 +74,9 @@
     text-shadow: 0 0 0.5em rgba(255, 255, 255, 0.5);
 }
 
-/* Back to Top Button */
-.btn-back2top {
+/* Back to XYZ Buttons */
+.btn-back2top, .btn-back2toc {
     bottom: 1.5rem;
-    right: 1.5rem;
     z-index: 1000;
     width: 3rem;
     height: 3rem;
@@ -85,6 +84,14 @@
     line-height: 2.125rem;
     margin: 0;
     padding: auto;
+}
+
+.btn-back2top {
+    right: 1.5rem;
+}
+
+.btn-back2toc {
+    right: 5.5rem;
 }
 
 
