@@ -75,7 +75,8 @@
 }
 
 /* Back to XYZ Buttons */
-.btn-back2top, .btn-back2toc {
+.btn-back2top,
+.btn-back2toc {
     bottom: 1.5rem;
     z-index: 1000;
     width: 3rem;
@@ -94,6 +95,17 @@
     right: 5.5rem;
 }
 
+/* Full-Page Embed */
+.full-embed {
+    flex-grow: 1;
+}
+
+.full-embed-frame {
+    height: 100%;
+    border: none;
+    width: 100%;
+    z-index: 0;
+}
 
 /* Animated Cursor */
 .anim.anim-cursor {
