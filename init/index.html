@@ -69,7 +69,25 @@
                 <div class="card shadow-sm">
                     <div class="card-body">
                         <h1 class="card-title" id="moment-time">(Time)</h1>
-                        <p class="card-text lead ps-1" id="moment-date">(Date)</p>
+                        <p class="card-text lead mb-0" id="moment-date">(Date)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weather -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h1 class="card-title">
+                            <span id="weather-temp-real">(Temp)</span>&deg;F
+                            <small class="text-secondary text-sm"><span id="weather-text">(Text)</span></small>
+                        </h1>
+                        <p class="card-text lead mb-0">
+                            Wind: <span id="weather-wind-speed">(Speed)</span>mph
+                            <span id="weather-wind-direction">(Direction)</span>,
+                            Feels: <span id="weather-temp-feels">(Temp)</span>&deg;F,
+                            Humidity: <span id="weather-humid">(Percent)</span>%
+                        </p>
                     </div>
                 </div>
             </div>
@@ -110,6 +128,7 @@
         async></script>
 
     <!-- Dynamic Content Scripts -->
+    <script src="/assets/scripts/widgets.js"></script>
     <script src="assets/dynamics.js"></script>
 
 </body>
