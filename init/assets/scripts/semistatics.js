@@ -161,7 +161,7 @@ function initSelfDestruct() {
         modalContain.addEventListener("hidden.bs.modal", () => {
 
             // Update body.
-            document.body.classList.add("explosion-body");
+            document.body.classList.add("boom");
 
             // Create flash.
             var flash = document.createElement("div");
@@ -175,7 +175,7 @@ function initSelfDestruct() {
 
             // Remove elements/classes after animation completes.
             explosion.addEventListener("animationend", () => {
-                document.body.classList.remove("explosion-body");
+                document.body.classList.remove("boom");
                 flash.remove();
                 explosion.remove();
             }, {once: true});
