@@ -312,7 +312,7 @@
             <div class="col-12 col-sm-6 col-lg-4 mb-4">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <div class="container-fluid text-center">
+                        <div class="container-fluid">
 
                             <!-- Notice -->
                             <div class="row mb-2">
@@ -387,6 +387,26 @@
                 </div>
             </div>
 
+            <!-- Self-Destruct Button -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+
+                        <!-- Notice -->
+                        <p class="card-text mb-2">
+                            <em>Big Red Button</em>
+                        </p>
+
+                        <!-- Button -->
+                        <button id="selfdestruct-btn" class="btn btn-lg btn-danger shadow-sm text-white"
+                            data-bs-toggle="modal" data-bs-target="#selfdestruct-modal">
+                            Activate Self-Destruct Sequence
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -414,7 +434,7 @@
 
     <!-- NASA APoD Description Modal -->
     <div class="modal fade" id="nasaapod-modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="nasaapod-modal-title">[Title]</h1>
@@ -427,6 +447,28 @@
         </div>
     </div>
 
+    <!-- Self-Destruct Modal --->
+    <div class="modal fade" id="selfdestruct-modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="selfdestruct-modal-title">[Title]</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="selfdestruct-modal-desc">
+                    [Desc]
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="selfdestruct-modal-no">
+                        [No]
+                    </button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="selfdestruct-modal-yes">
+                        [Yes]
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
