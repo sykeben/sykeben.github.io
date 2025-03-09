@@ -42,11 +42,13 @@ function updateText(id, subid, content) {
 }
 
 // Simple image update helper.
-function updateImage(id, subid, source) {
+function updateImage(id, subid, source, doLayout = false) {
     const elem = idElement(id, subid);
-    elem.addEventListener("load", () => {
-        setTimeout(() => { masonry.layout(); }, 125);
-    }, { once: true });
+    if (doLayout) {
+        elem.addEventListener("load", () => {
+            setTimeout(() => { masonry.layout(); }, 125);
+        }, { once: true });
+    }
     elem.src = source;
 }
 
@@ -242,7 +244,7 @@ const updateNasaAPOD = (id, lastData = null) => new Promise((resolve) => {
             updateText(id, "title", newData.title);
             updateText(id, "modal-title", newData.title);
             updateText(id, "modal-desc", newData.desc);
-            updateImage(id, "img", newData.img.sd);
+            updateImage(id, "img", newData.img.sd, true);
         }
         resolve(newData);
     });
