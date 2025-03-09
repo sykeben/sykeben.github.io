@@ -26,7 +26,7 @@
     max-height: 100%;
 }
 
-.card.biz-card .biz-img {
+.biz-img {
     object-fit: cover;
     height: auto;
     max-height: 100%;

@@ -61,15 +61,20 @@
     </nav>
 
     <!-- Content -->
-    <div class="container-fluid mt-4">
+    <div class="container-fluid mt-4 text-center">
         <div class="row m-0" data-masonry='{"percentPosition": true }'>
 
             <!-- Moment -->
             <div class="col-12 col-sm-6 col-lg-4 mb-4">
                 <div class="card shadow-sm">
                     <div class="card-body">
+
+                        <!-- Time -->
                         <h1 class="card-title" id="moment-time">(Time)</h1>
+
+                        <!-- Date-->
                         <p class="card-text lead mb-0" id="moment-date">(Date)</p>
+
                     </div>
                 </div>
             </div>
@@ -78,16 +83,34 @@
             <div class="col-12 col-sm-6 col-lg-4 mb-4">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <h1 class="card-title">
-                            <span id="weather-temp-real">(Temp)</span>&deg;F
-                            <small class="text-secondary text-sm"><span id="weather-text">(Text)</span></small>
-                        </h1>
-                        <p class="card-text lead mb-0">
-                            Wind: <span id="weather-wind-speed">(Speed)</span>mph
-                            <span id="weather-wind-direction">(Direction)</span>,
-                            Feels: <span id="weather-temp-feels">(Temp)</span>&deg;F,
-                            Humidity: <span id="weather-humid">(Percent)</span>%
-                        </p>
+                        <div class="container-fluid">
+                            <div class="row">
+
+                                <!-- Icon -->
+                                <div class="col-4 p-0 m-0">
+                                    <img id="weather-icon" class="img-fluid biz-img rounded-1 shadow-sm">
+                                </div>
+
+                                <!-- Conditions -->
+                                <div class="col-8">
+                                    <h1 class="card-title">
+                                        <span id="weather-temp-real">(Temp)</span>&deg;F
+                                        <small class="text-secondary text-sm"><span id="weather-text">(Text)</span></small>
+                                    </h1>
+                                    <p class="card-text mb-0">
+                                        Feels Like: <span id="weather-temp-feels">(Temp)</span>&deg;F
+                                    </p>
+                                    <p class="card-text mb-0">
+                                        Windspeed: <span id="weather-wind-speed">(Speed)</span>mph
+                                        <span id="weather-wind-direction">(Direction)</span>
+                                    </p>
+                                    <p class="card-text mb-0">
+                                        Humidity: <span id="weather-humid">(Percent)</span>%
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
