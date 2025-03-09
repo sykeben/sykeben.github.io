@@ -1,4 +1,88 @@
 //==============================================================================
+// QUICKLINKS
+//==============================================================================
+
+// Initializer.
+function initQuicklinks() {
+
+    // Get elements.
+    const listing = document.getElementById("quicklinks-list");
+
+    // Define link collection.
+    const links = [
+        {
+            url: "https://purdue.brightspace.com/",
+            title: "Brightspace", icon: "easel2"
+        }, {
+            url: "https://dig.shovelapp.io/",
+            title: "Shovel", icon: "calendar2-week"
+        }, {
+            url: "https://purdue.brightspace.com/",
+            title: "Piazza", icon: "chat-quote"
+        }, {
+            url: "https://www.gradescope.com/",
+            title: "Gradescope", icon: "bar-chart-line"
+        }, {
+            url: "https://bus.gocitybus.com/RouteMap/Index",
+            title: "CityBus", icon: "bus-front"
+        }, {
+            url: "https://mypurdue.purdue.edu/",
+            title: "MyPurdue", icon: "mortarboard"
+        }, {
+            url: "https://outlook.office.com/?realm=purdue.edu",
+            title: "Outlook", icon: "envelope-at"
+        }, {
+            url: "https://wpvapppcprt01.itap.purdue.edu:9192/mobile/release",
+            title: "Printing", icon: "printer"
+        }, {
+            url: "https://lslab.ics.purdue.edu/icsWeb/LabMap",
+            title: "ITaP Labs", icon: "pc-display"
+        }, {
+            url: "https://sykeben.github.io/study-area-finder/",
+            title: "Where2Study", icon: "pin-map"
+        }
+    ];
+
+    // Generate links.
+    listing.innerHTML = "";
+    links.forEach((link, index) => {
+
+        // Create container.
+        const div = document.createElement("div");
+        div.classList.add("col");
+
+        // Create icon.
+        const i = document.createElement("i");
+        i.classList.add("bi", `bi-${link.icon}`);
+
+        // Create spacer.
+        const span = document.createElement("span");
+        span.textContent = " ";
+
+        // Create anchor.
+        const a = document.createElement("a");
+        a.href = link.url;
+        a.textContent = link.title;
+
+        // Add to container.
+        if (index % 2 == 0) {
+            div.appendChild(i);
+            div.appendChild(span);
+            div.appendChild(a);
+        } else {
+            div.appendChild(a);
+            div.appendChild(span);
+            div.appendChild(i);
+        }
+
+        // Add to listing.
+        listing.appendChild(div);
+
+    });
+
+}
+
+//==============================================================================
 // SI RATIO CONVERSION
 //==============================================================================
 
@@ -195,6 +279,7 @@ function initSelfDestruct() {
 //==============================================================================
 
 document.addEventListener("DOMContentLoaded", function () {
+    initQuicklinks();
     initSIRatio();
     initSelfDestruct();
 });
