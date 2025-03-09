@@ -288,6 +288,6 @@ class Widget {
 startUpdateManager([
     new Widget("moment-time", updateMomentTime, 1000, false),
     new Widget("moment-date", updateMomentDate, 60000, false),
-    new Widget("weather", updateCampusWeather, 300000, true),
-    new Widget("bbquote", updateBBQuote, 900000, true)
+    new Widget("weather", updateCampusWeather, 600000, true),
+    new Widget("bbquote", updateBBQuote, 300000, true)
 ]);
