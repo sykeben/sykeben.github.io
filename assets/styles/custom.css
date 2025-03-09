@@ -6,12 +6,12 @@
 /* Nospin Spinbox */
 input.nospin::-webkit-outer-spin-button,
 input.nospin::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 input[type=number].nospin {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 /* Definition Text */
@@ -140,4 +140,86 @@ input[type=number].nospin {
     100% {
         opacity: 0;
     }
+}
+
+/* Explosion animation */
+@keyframes explosion {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 0, 0, 1) 60%, rgba(255, 0, 0, 0.5) 100%);
+    }
+
+    25% {
+        opacity: 0.25;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 165, 0, 1) 50%, rgba(255, 0, 0, 0.8) 100%);
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 140, 0, 1) 50%, rgba(255, 0, 0, 0.8) 100%);
+    }
+
+    75% {
+        opacity: 0.25;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 140, 0, 0.6) 50%, rgba(255, 0, 0, 0.5) 100%);
+    }
+
+    100% {
+        transform: scale(20);
+        opacity: 0;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(255, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
+    }
+}
+
+.explosion-body {
+    pointer-events: none;
+    user-select: none;
+    overflow: hidden;
+}
+
+.explosion {
+    position: fixed;
+    top: calc(50vh - 50px);
+    left: calc(50vw - 50px);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(255, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
+    border-radius: 50%;
+    animation: explosion 3s forwards;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Flash overlay animation */
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.flash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    opacity: 0;
+    animation: flash 3s forwards ease-out;
+    pointer-events: none;
+    z-index: 9998;
 }

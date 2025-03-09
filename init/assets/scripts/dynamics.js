@@ -45,7 +45,9 @@ function updateText(id, subid, content) {
 function updateImage(id, subid, source) {
     const elem = idElement(id, subid);
     elem.addEventListener("load", () => {
-        masonry.layout();
+        setTimeout(() => {
+            masonry.layout();
+        }, 125);
     }, {once: true});
     elem.src = source;
 }

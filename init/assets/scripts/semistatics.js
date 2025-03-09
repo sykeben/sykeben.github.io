@@ -45,6 +45,7 @@ function initSelfDestruct() {
 
     // Get elements.
     const bigRedBtn = document.getElementById("selfdestruct-btn");
+    const modalContain = document.getElementById("selfdestruct-modal");
     const modalTitle = document.getElementById("selfdestruct-modal-title");
     const modalDescription = document.getElementById("selfdestruct-modal-desc");
     const modalNoBtn = document.getElementById("selfdestruct-modal-no");
@@ -155,7 +156,32 @@ function initSelfDestruct() {
 
     // Explosion trigger method.
     function triggerBigBoom() {
-        alert("KABOOM!");
+
+        // Trigger after modal goes away.
+        modalContain.addEventListener("hidden.bs.modal", () => {
+
+            // Update body.
+            document.body.classList.add("explosion-body");
+
+            // Create flash.
+            var flash = document.createElement("div");
+            flash.classList.add("flash");
+            flash = document.body.appendChild(flash);
+
+            // Create explosion.
+            var explosion = document.createElement("div");
+            explosion.classList.add("explosion");
+            explosion = document.body.appendChild(explosion);
+
+            // Remove elements/classes after animation completes.
+            explosion.addEventListener("animationend", () => {
+                document.body.classList.remove("explosion-body");
+                flash.remove();
+                explosion.remove();
+            }, {once: true});
+
+        }, {once: true});
+
     }
 
     // Add listeners.
