@@ -67,7 +67,7 @@ function nwseAngle(angle) {
 }
 
 //==============================================================================
-// MOMENT WIDGET
+// MOMENT TIME/DATE
 //==============================================================================
 
 // Moment: Time.
@@ -105,7 +105,7 @@ const updateMomentDate = (id, lastData = null) => new Promise((resolve) => {
 });
 
 //==============================================================================
-// CAMPUS WEATHER WIDGET
+// CAMPUS WEATHER
 //==============================================================================
 
 // Campus weather.
@@ -155,6 +155,47 @@ const updateCampusWeather = (id, lastData = null) => new Promise((resolve) => {
             updateText(id, "wind-speed", Math.round(newData.wind.speed));
             updateText(id, "wind-direction", newData.wind.direction);
             updateText(id, "humid", Math.round(newData.humid));
+        }
+        resolve(newData);
+    });
+
+});
+
+//==============================================================================
+// BREAKING BAD QUOTE
+//==============================================================================
+
+// Campus weather.
+const updateBBQuote = (id, lastData = null) => new Promise((resolve) => {
+
+    // Promise data.
+    promiseData = lastData ? new Promise((resolve) => {
+
+        // Re-use existing data.
+        resolve(lastData);
+
+    }) : new Promise((resolve) => {
+
+        // Get new data.
+        getJSON(`https://api.breakingbadquotes.xyz/v1/quotes`).then((result) => {
+            if (result.success) {
+                const data = result.data[0];
+                resolve({
+                    quote: data.quote,
+                    author: data.author
+                });
+            } else {
+                resolve(null);
+            }
+        });
+
+    });
+
+    // Update.
+    promiseData.then((newData) => {
+        if (newData) {
+            updateText(id, "quote", newData.quote);
+            updateText(id, "author", newData.author);
         }
         resolve(newData);
     });
@@ -247,5 +288,6 @@ class Widget {
 startUpdateManager([
     new Widget("moment-time", updateMomentTime, 1000, false),
     new Widget("moment-date", updateMomentDate, 60000, false),
-    new Widget("weather", updateCampusWeather, 900000, true)
+    new Widget("weather", updateCampusWeather, 300000, true),
+    new Widget("bbquote", updateBBQuote, 900000, true)
 ]);
