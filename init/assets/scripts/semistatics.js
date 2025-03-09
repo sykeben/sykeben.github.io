@@ -95,6 +95,53 @@ function initSIRatio() {
     const fromVal = document.getElementById("si-ratio-from-val");
     const toVal = document.getElementById("si-ratio-to-val");
 
+    // Define selection options.
+    const siPrefixes = [
+        { value: 24, label: "yotta (Y)" },
+        { value: 21, label: "zetta (Z)" },
+        { value: 18, label: "exa (E)" },
+        { value: 15, label: "peta (P)" },
+        { value: 12, label: "tera (T)" },
+        { value: 9, label: "giga (G)" },
+        { value: 6, label: "mega (M)" },
+        { value: 3, label: "kilo (k)" },
+        { value: 2, label: "hecto (h)" },
+        { value: 1, label: "deca (da)" },
+        "separator",
+        { value: 0, label: "none", selected: true },
+        "separator",
+        { value: -1, label: "deci (d)" },
+        { value: -2, label: "centi (c)" },
+        { value: -3, label: "milli (m)" },
+        { value: -6, label: "micro (µ)" },
+        { value: -9, label: "nano (n)" },
+        { value: -12, label: "pico (p)" },
+        { value: -15, label: "femto (f)" },
+        { value: -18, label: "atto (a)" },
+        { value: -21, label: "zepto (z)" },
+        { value: -24, label: "yocto (y)" }
+    ];
+
+    // Initialize selection boxes.
+    [fromFix, toFix].forEach((box) => {
+        box.innerHTML = "";
+        siPrefixes.forEach((item) => {
+            if (item === "separator") {
+                const option = document.createElement("option");
+                option.value = "null";
+                option.disabled = true;
+                option.textContent = "──────────";
+                box.appendChild(option);
+            } else {
+                const option = document.createElement("option");
+                option.value = item.value;
+                option.textContent = item.label;
+                if (item.selected) option.selected = true;
+                box.appendChild(option);
+            }
+        });
+    });
+
     // Conversion method.
     function convert(fromInput) {
 
@@ -262,9 +309,9 @@ function initSelfDestruct() {
                 document.body.classList.remove("boom");
                 flash.remove();
                 explosion.remove();
-            }, {once: true});
+            }, { once: true });
 
-        }, {once: true});
+        }, { once: true });
 
     }
 
