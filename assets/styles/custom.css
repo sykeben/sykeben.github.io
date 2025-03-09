@@ -3,6 +3,17 @@
     cursor: pointer;
 }
 
+/* Nospin Spinbox */
+input.nospin::-webkit-outer-spin-button,
+input.nospin::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number].nospin {
+  -moz-appearance: textfield;
+}
+
 /* Definition Text */
 .definition {
     text-decoration: dotted underline;

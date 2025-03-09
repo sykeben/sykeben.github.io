@@ -103,7 +103,7 @@
                             </div>
 
                             <!-- Conditions -->
-                            <div class="row">
+                            <div class="row align-items-center">
 
                                 <!-- Icon -->
                                 <div class="col-4 p-0 m-0">
@@ -201,6 +201,102 @@
                 </div>
             </div>
 
+            <!-- SI Conversion -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="container-fluid">
+
+                            <!-- Notice -->
+                            <div class="row mb-2">
+                                <div class="col-12">
+                                    <em class="card-text mb-0">
+                                        SI Ratio Conversion
+                                    </em>
+                                </div>
+                            </div>
+
+                            <!-- Prefixes -->
+                            <div class="row mb-2 align-items-end">
+                                <div class="col">
+                                    <select class="form-select form-select-sm" id="si-ratio-from-fix">
+                                        <option value="24">yotta (Y)</option>
+                                        <option value="21">zetta (Z)</option>
+                                        <option value="18">exa (E)</option>
+                                        <option value="15">peta (P)</option>
+                                        <option value="12">tera (T)</option>
+                                        <option value="9">giga (G)</option>
+                                        <option value="6">mega (M)</option>
+                                        <option value="3">kilo (k)</option>
+                                        <option value="2">hecto (h)</option>
+                                        <option value="1">deca (da)</option>
+                                        <option value="null" disabled>──────────</option>
+                                        <option value="0" selected>none</option>
+                                        <option value="null" disabled>──────────</option>
+                                        <option value="-1">deci (d)</option>
+                                        <option value="-2">centi (c)</option>
+                                        <option value="-3">milli (m)</option>
+                                        <option value="-6">micro (µ)</option>
+                                        <option value="-9">nano (n)</option>
+                                        <option value="-12">pico (p)</option>
+                                        <option value="-15">femto (f)</option>
+                                        <option value="-18">atto (a)</option>
+                                        <option value="-21">zepto (z)</option>
+                                        <option value="-24">yocto (y)</option>
+                                    </select>
+                                </div>
+                                <div class="col-auto px-0">
+                                    <i class="bi bi-arrow-left"></i>
+                                </div>
+                                <div class="col">
+                                    <select class="form-select form-select-sm" id="si-ratio-to-fix">
+                                        <option value="24">yotta (Y)</option>
+                                        <option value="21">zetta (Z)</option>
+                                        <option value="18">exa (E)</option>
+                                        <option value="15">peta (P)</option>
+                                        <option value="12">tera (T)</option>
+                                        <option value="9">giga (G)</option>
+                                        <option value="6">mega (M)</option>
+                                        <option value="3">kilo (k)</option>
+                                        <option value="2">hecto (h)</option>
+                                        <option value="1">deca (da)</option>
+                                        <option value="null" disabled>──────────</option>
+                                        <option value="0" selected>none</option>
+                                        <option value="null" disabled>──────────</option>
+                                        <option value="-1">deci (d)</option>
+                                        <option value="-2">centi (c)</option>
+                                        <option value="-3">milli (m)</option>
+                                        <option value="-6">micro (µ)</option>
+                                        <option value="-9">nano (n)</option>
+                                        <option value="-12">pico (p)</option>
+                                        <option value="-15">femto (f)</option>
+                                        <option value="-18">atto (a)</option>
+                                        <option value="-21">zepto (z)</option>
+                                        <option value="-24">yocto (y)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Values -->
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <input class="form-control form-control-sm nospin" type="number"
+                                        id="si-ratio-from-val">
+                                </div>
+                                <div class="col-auto px-0">
+                                    <i class="bi bi-arrow-right"></i>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control form-control-sm nospin" type="number"
+                                        id="si-ratio-to-val">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -236,7 +332,8 @@
         integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
         async></script>
 
-    <!-- Dynamic Content Scripts -->
+    <!-- Content Scripts -->
+    <script src="assets/semistatics.js"></script>
     <script src="assets/dynamics.js"></script>
 
 </body>
