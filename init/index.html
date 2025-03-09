@@ -62,7 +62,7 @@
 
     <!-- Content -->
     <div class="container-fluid mt-4 text-center">
-        <div class="row m-0" data-masonry='{"percentPosition": true }'>
+        <div class="row m-0" id="widget-grid">
 
             <!-- Moment -->
             <div class="col-12 col-sm-6 col-lg-4 mb-4">
@@ -107,14 +107,15 @@
 
                                 <!-- Icon -->
                                 <div class="col-4 p-0 m-0">
-                                    <img id="weather-icon" class="img-fluid biz-img rounded-1 shadow-sm">
+                                    <img id="weather-icon" src="assets/placeholders/weather-icon.webp"
+                                        class="img-fluid biz-img rounded-1 shadow-sm">
                                 </div>
 
                                 <!-- Data -->
                                 <div class="col-8">
                                     <h1 class="card-title">
                                         <span id="weather-temp-real">[Temp]</span>&deg;F
-                                        <small class="text-secondary text-sm">
+                                        <small class="text-secondary">
                                             <span id="weather-text">[Text]</span>
                                         </small>
                                     </h1>
@@ -361,6 +362,31 @@
                 </div>
             </div>
 
+            <!-- NASA APoD -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+
+                    <!-- Content -->
+                    <div class="card-body">
+
+                        <!-- Notice -->
+                        <p class="card-text mb-2">
+                            <em>NASA Astronomy Picture of the Day (APoD)</em>
+                        </p>
+
+                        <!-- Title -->
+                        <h5 class="card-title mb-1" id="nasaapod-title">[Title]</h5>
+
+                    </div>
+
+                    <!-- Image -->
+                    <img class="card-img-bottom" id="nasaapod-img" data-bs-toggle="modal"
+                        data-bs-target="#nasaapod-modal" src="assets/placeholders/apod-generic.webp"
+                        title="Click me to open an explanation!">
+
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -386,6 +412,22 @@
         </div>
     </footer>
 
+    <!-- NASA APoD Description Modal -->
+    <div class="modal fade" id="nasaapod-modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="nasaapod-modal-title">[Title]</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="nasaapod-modal-desc">
+                    [Desc]
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Bootstrap Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -393,12 +435,23 @@
 
     <!-- Masonry Plugin -->
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
-        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
-        async></script>
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+        crossorigin="anonymous"></script>
+    <script>
+
+        // Masonry instance.
+        const masonry = new Masonry('#widget-grid', { percentPosition: true });
+
+        // Initialization.
+        document.addEventListener("DOMContentLoaded", () => {
+            masonry.layout();
+        });
+
+    </script>
 
     <!-- Content Scripts -->
-    <script src="assets/semistatics.js"></script>
-    <script src="assets/dynamics.js"></script>
+    <script src="assets/scripts/semistatics.js"></script>
+    <script src="assets/scripts/dynamics.js"></script>
 
 </body>
 

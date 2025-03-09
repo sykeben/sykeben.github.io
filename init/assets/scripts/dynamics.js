@@ -6,7 +6,8 @@
 const config = {
     timeFormat: { hour: "2-digit", minute: "2-digit", second: "2-digit" },
     dateFormat: { weekday: "long", year: "numeric", month: "long", day: "numeric" },
-    noaaStation: "KLAF"
+    noaaStation: "KLAF",
+    nasaKey: "DEMO_KEY" // Nice try, webscrapers!
 };
 
 //==============================================================================
@@ -42,7 +43,11 @@ function updateText(id, subid, content) {
 
 // Simple image update helper.
 function updateImage(id, subid, source) {
-    idElement(id, subid).src = source;
+    const elem = idElement(id, subid);
+    elem.addEventListener("load", () => {
+        masonry.layout();
+    }, {once: true});
+    elem.src = source;
 }
 
 //==============================================================================
@@ -165,7 +170,7 @@ const updateCampusWeather = (id, lastData = null) => new Promise((resolve) => {
 // BREAKING BAD QUOTE
 //==============================================================================
 
-// Campus weather.
+// BB Quote.
 const updateBBQuote = (id, lastData = null) => new Promise((resolve) => {
 
     // Promise data.
@@ -196,6 +201,54 @@ const updateBBQuote = (id, lastData = null) => new Promise((resolve) => {
         if (newData) {
             updateText(id, "quote", newData.quote);
             updateText(id, "author", newData.author);
+            masonry.layout();
+        }
+        resolve(newData);
+    });
+
+});
+
+//==============================================================================
+// NASA APOD
+//==============================================================================
+
+// NASA APoD.
+const updateNasaAPOD = (id, lastData = null) => new Promise((resolve) => {
+
+    // Promise data.
+    promiseData = lastData ? new Promise((resolve) => {
+
+        // Re-use existing data.
+        resolve(lastData);
+
+    }) : new Promise((resolve) => {
+
+        // Get new data.
+        getJSON(`https://api.nasa.gov/planetary/apod?api_key=${config.nasaKey}`).then((result) => {
+            if (result.success) {
+                const data = result.data;
+                resolve({
+                    title: data.title,
+                    desc: data.explanation,
+                    img: {
+                        sd: data.url,
+                        hd: data.hdurl
+                    }
+                });
+            } else {
+                resolve(null);
+            }
+        });
+
+    });
+
+    // Update.
+    promiseData.then((newData) => {
+        if (newData) {
+            updateText(id, "title", newData.title);
+            updateText(id, "modal-title", newData.title);
+            updateText(id, "modal-desc", newData.desc);
+            updateImage(id, "img", newData.img.sd);
         }
         resolve(newData);
     });
@@ -289,5 +342,6 @@ startUpdateManager([
     new Widget("moment-time", updateMomentTime, 1000, false),
     new Widget("moment-date", updateMomentDate, 60000, false),
     new Widget("weather", updateCampusWeather, 600000, true),
-    new Widget("bbquote", updateBBQuote, 300000, true)
+    new Widget("bbquote", updateBBQuote, 300000, true),
+    new Widget("nasaapod", updateNasaAPOD, 21600000, true)
 ]);
