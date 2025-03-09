@@ -124,6 +124,7 @@ const updateCampusWeather = (id, lastData = null) => new Promise((resolve) => {
             if (result.success) {
                 const data = result.data.properties;
                 resolve({
+                    station: config.noaaStation,
                     icon: data.icon,
                     temp: {
                         real: degCtoF(data.temperature.value),
@@ -146,6 +147,7 @@ const updateCampusWeather = (id, lastData = null) => new Promise((resolve) => {
     // Update.
     promiseData.then((newData) => {
         if (newData) {
+            updateText(id, "station", newData.station);
             updateImage(id, "icon", newData.icon);
             updateText(id, "temp-real", Math.round(newData.temp.real));
             updateText(id, "text", newData.text);

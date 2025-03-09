@@ -69,11 +69,14 @@
                 <div class="card shadow-sm">
                     <div class="card-body">
 
+                        <!-- Notice -->
+                        <em class="card-text mb-2">Current Time and Date</em>
+
                         <!-- Time -->
-                        <h1 class="card-title" id="moment-time">(Time)</h1>
+                        <h1 class="card-title mb-0" id="moment-time">[Locale Time]</h1>
 
                         <!-- Date-->
-                        <p class="card-text lead mb-0" id="moment-date">(Date)</p>
+                        <p class="card-text lead mb-0" id="moment-date">[Locale Date]</p>
 
                     </div>
                 </div>
@@ -84,6 +87,18 @@
                 <div class="card shadow-sm">
                     <div class="card-body">
                         <div class="container-fluid">
+
+                            <!-- Notice -->
+                            <div class="row mb-2">
+                                <div class="col-12">
+                                    <em class="card-text mb-0">
+                                        Weather at Purdue University
+                                        (<span id="weather-station">[Station]</span>)
+                                    </em>
+                                </div>
+                            </div>
+
+                            <!-- Conditions -->
                             <div class="row">
 
                                 <!-- Icon -->
@@ -91,25 +106,26 @@
                                     <img id="weather-icon" class="img-fluid biz-img rounded-1 shadow-sm">
                                 </div>
 
-                                <!-- Conditions -->
+                                <!-- Data -->
                                 <div class="col-8">
                                     <h1 class="card-title">
-                                        <span id="weather-temp-real">(Temp)</span>&deg;F
-                                        <small class="text-secondary text-sm"><span id="weather-text">(Text)</span></small>
+                                        <span id="weather-temp-real">[Temp]</span>&deg;F
+                                        <small class="text-secondary text-sm"><span id="weather-text">[Text]</span></small>
                                     </h1>
                                     <p class="card-text mb-0">
-                                        Feels Like: <span id="weather-temp-feels">(Temp)</span>&deg;F
+                                        Feels Like: <span id="weather-temp-feels">[Temp]</span>&deg;F
                                     </p>
                                     <p class="card-text mb-0">
-                                        Windspeed: <span id="weather-wind-speed">(Speed)</span>mph
-                                        <span id="weather-wind-direction">(Direction)</span>
+                                        Windspeed: <span id="weather-wind-speed">[Speed]</span>mph
+                                        <span id="weather-wind-direction">[Direction]</span>
                                     </p>
                                     <p class="card-text mb-0">
-                                        Humidity: <span id="weather-humid">(Percent)</span>%
+                                        Humidity: <span id="weather-humid">[Percent]</span>%
                                     </p>
                                 </div>
 
                             </div>
+
                         </div>
                     </div>
                 </div>
