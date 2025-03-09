@@ -45,10 +45,8 @@ function updateText(id, subid, content) {
 function updateImage(id, subid, source) {
     const elem = idElement(id, subid);
     elem.addEventListener("load", () => {
-        setTimeout(() => {
-            masonry.layout();
-        }, 125);
-    }, {once: true});
+        setTimeout(() => { masonry.layout(); }, 125);
+    }, { once: true });
     elem.src = source;
 }
 
@@ -187,10 +185,7 @@ const updateBBQuote = (id, lastData = null) => new Promise((resolve) => {
         getJSON(`https://api.breakingbadquotes.xyz/v1/quotes`).then((result) => {
             if (result.success) {
                 const data = result.data[0];
-                resolve({
-                    quote: data.quote,
-                    author: data.author
-                });
+                resolve({ quote: data.quote, author: data.author });
             } else {
                 resolve(null);
             }
@@ -232,10 +227,7 @@ const updateNasaAPOD = (id, lastData = null) => new Promise((resolve) => {
                 resolve({
                     title: data.title,
                     desc: data.explanation,
-                    img: {
-                        sd: data.url,
-                        hd: data.hdurl
-                    }
+                    img: { sd: data.url, hd: data.hdurl }
                 });
             } else {
                 resolve(null);
@@ -266,11 +258,11 @@ class Widget {
 
     // Constructor.
     constructor(id, update = null, period = 0, useCache = true) {
-        this.id = id; // Identifier.
-        this.update = update; // Update handler.
-        this.period = period; // Time period.
-        this.useCache = useCache; // Cache setting.
-        this.interval = null; // Interval id.
+        this.id = id;
+        this.update = update;
+        this.period = period;
+        this.useCache = useCache;
+        this.interval = null;
 
         // Initialize cache info.
         this.lastUpdated = 0;
@@ -301,8 +293,7 @@ class Widget {
                     this.lastData = newData;
                     if (this.useCache) {
                         localStorage.setItem(`initwidget-${this.id}`, JSON.stringify({
-                            updated: this.lastUpdated,
-                            data: this.lastData
+                            updated: this.lastUpdated, data: this.lastData
                         }));
                     }
                 }

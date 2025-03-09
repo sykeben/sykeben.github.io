@@ -68,18 +68,9 @@
             <div class="col-12 col-sm-6 col-lg-4 mb-4">
                 <div class="card shadow-sm">
                     <div class="card-body">
-
-                        <!-- Notice -->
-                        <p class="card-text mb-2">
-                            <em>Current Time and Date</em>
-                        </p>
-
-                        <!-- Time -->
+                        <p class="card-text mb-2"><em>Current Time and Date</em></p>
                         <h1 class="card-title mb-0" id="moment-time">[Locale Time]</h1>
-
-                        <!-- Date-->
                         <p class="card-text lead mb-0" id="moment-date">[Locale Date]</p>
-
                     </div>
                 </div>
             </div>
@@ -147,16 +138,12 @@
                             <!-- Notice -->
                             <div class="row mb-2">
                                 <div class="col-12">
-                                    <em class="card-text mb-0">
-                                        Campus Quicklinks
-                                    </em>
+                                    <em class="card-text mb-0">Campus Quicklinks</em>
                                 </div>
                             </div>
 
                             <!-- Listing -->
-                            <div class="row row-cols-2 g-2" id="quicklinks-list">
-                                [Links]
-                            </div>
+                            <div class="row row-cols-2 g-2" id="quicklinks-list">[Links]</div>
 
                         </div>
                     </div>
@@ -172,9 +159,7 @@
                             <!-- Notice -->
                             <div class="row mb-2">
                                 <div class="col-12">
-                                    <em class="card-text mb-0">
-                                        SI Ratio Conversion
-                                    </em>
+                                    <em class="card-text mb-0">SI Ratio Conversion</em>
                                 </div>
                             </div>
 
@@ -201,9 +186,7 @@
                                     <input class="form-control form-control-sm nospin" type="number"
                                         placeholder="From..." id="si-ratio-from-val">
                                 </div>
-                                <div class="col-auto px-0">
-                                    <i class="bi bi-arrow-right"></i>
-                                </div>
+                                <div class="col-auto px-0"><i class="bi bi-arrow-right"></i></div>
                                 <div class="col">
                                     <input class="form-control form-control-sm nospin" type="number" placeholder="To..."
                                         id="si-ratio-to-val">
@@ -251,16 +234,12 @@
                     <div class="card-body">
 
                         <!-- Notice -->
-                        <p class="card-text mb-2">
-                            <em>Breaking Bad Quote</em>
-                        </p>
+                        <p class="card-text mb-2"><em>Breaking Bad Quote</em></p>
 
                         <!-- Quote -->
                         <p class="card-text lead mb-1">
                             &ldquo;<span id="bbquote-quote">[Quote]</span>&rdquo;
                         </p>
-
-                        <!-- Source -->
                         <p class="card-text text-secondary mb-0">
                             &mdash;&nbsp;<span id="bbquote-author">[Author]</span>&nbsp;&mdash;
                         </p>
@@ -275,15 +254,8 @@
 
                     <!-- Content -->
                     <div class="card-body">
-
-                        <!-- Notice -->
-                        <p class="card-text mb-2">
-                            <em>NASA Astronomy Picture of the Day (APoD)</em>
-                        </p>
-
-                        <!-- Title -->
+                        <p class="card-text mb-2"><em>NASA Astronomy Picture of the Day (APoD)</em></p>
                         <h5 class="card-title mb-1" id="nasaapod-title">[Title]</h5>
-
                     </div>
 
                     <!-- Image -->
@@ -298,18 +270,11 @@
             <div class="col-12 col-sm-6 col-lg-4 mb-4">
                 <div class="card shadow-sm">
                     <div class="card-body">
-
-                        <!-- Notice -->
-                        <p class="card-text mb-2">
-                            <em>Big Red Button</em>
-                        </p>
-
-                        <!-- Button -->
+                        <p class="card-text mb-2"><em>Big Red Button</em></p>
                         <button id="selfdestruct-btn" class="btn btn-lg btn-danger shadow-sm text-white"
                             data-bs-toggle="modal" data-bs-target="#selfdestruct-modal">
                             Activate Self-Destruct Sequence
                         </button>
-
                     </div>
                 </div>
             </div>
@@ -347,9 +312,7 @@
                     <h1 class="modal-title fs-5" id="nasaapod-modal-title">[Title]</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" id="nasaapod-modal-desc">
-                    [Desc]
-                </div>
+                <div class="modal-body" id="nasaapod-modal-desc">[Desc]</div>
             </div>
         </div>
     </div>
@@ -362,9 +325,7 @@
                     <h1 class="modal-title fs-5" id="selfdestruct-modal-title">[Title]</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" id="selfdestruct-modal-desc">
-                    [Desc]
-                </div>
+                <div class="modal-body" id="selfdestruct-modal-desc">[Desc]</div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="selfdestruct-modal-no">
                         [No]
@@ -387,15 +348,8 @@
         integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
         crossorigin="anonymous"></script>
     <script>
-
-        // Masonry instance.
         const masonry = new Masonry('#widget-grid', { percentPosition: true });
-
-        // Initialization.
-        document.addEventListener("DOMContentLoaded", () => {
-            masonry.layout();
-        });
-
+        document.addEventListener("DOMContentLoaded", () => { masonry.layout(); });
     </script>
 
     <!-- Content Scripts -->
