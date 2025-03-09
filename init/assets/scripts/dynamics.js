@@ -337,6 +337,6 @@ startUpdateManager([
     new Widget("moment-time", updateMomentTime, 1000, false),
     new Widget("moment-date", updateMomentDate, 60000, false),
     new Widget("weather", updateCampusWeather, 900000, true),
-    new Widget("bbquote", updateBBQuote, 900000, true),
+    new Widget("bbquote", updateBBQuote, 1800000, true),
     new Widget("nasaapod", updateNasaAPOD, 21600000, true)
 ]);
