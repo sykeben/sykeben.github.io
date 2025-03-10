@@ -14,6 +14,18 @@ input[type=number].nospin {
     -moz-appearance: textfield;
 }
 
+/* Nodrop Dropdown */
+select.form-select.nodrop::-ms-expand {
+    display: none;
+}
+
+select.form-select.nodrop {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: none;
+    padding-right: 0;
+}
+
 /* Definition Text */
 .definition {
     text-decoration: dotted underline;

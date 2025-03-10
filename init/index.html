@@ -292,6 +292,58 @@
                 </div>
             </div>
 
+            <!-- Resistor Color Codes -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="container-fluid">
+
+                            <!-- Notice -->
+                            <div class="row mb-2 g-0">
+                                <div class="col-12">
+                                    <em class="card-text mb-0">Resistor Color Codes</em>
+                                </div>
+                            </div>
+
+                            <!-- Band Selection -->
+                            <div class="row mb-2">
+                                <div class="col-12">
+                                    <div class="btn-group" role="group" id="rcc-bandsel">[Bands]</div>
+                                </div>
+                            </div>
+
+                            <!-- Color Selection & Names -->
+                            <div class="row mb-2 g-1" id="rcc-bandcol">[Colors]</div>
+                            <div class="row mb-2 g-1" id="rcc-bandtyp">[Types]</div>
+
+                            <!-- Value Display -->
+                            <div class="row mb-2 align-items-center">
+
+                                <!-- Resistance -->
+                                <div class="col">
+                                    <h1 class="card-title">
+                                        <span id="rcc-value">[Value]</span>&Omega;
+                                    </h1>
+                                </div>
+
+                                <!-- Other Metrics -->
+                                <div class="col-auto">
+                                    <small class="text-body-secondary fs-6" id="rcc-tolerance-parent">
+                                        Tolerance: &PlusMinus;<span id="rcc-tolerance">[Tol]</span>%
+                                    </small>
+                                    <br>
+                                    <small class="text-body-secondary fs-6" id="rcc-tcr-parent">
+                                        TCR: &PlusMinus;<span id="rcc-tcr">[TCR]</span>&times;10<sup>-6</sup>/K
+                                    </small>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 

@@ -295,6 +295,234 @@ function initSelfDestruct() {
 }
 
 //==============================================================================
+// RESISTOR COLOR CODES
+//==============================================================================
+
+// Initializer.
+function initRColorCodes() {
+
+    // Get static elements.
+    const elemSel = document.getElementById("rcc-bandsel");
+    const elemCol = document.getElementById("rcc-bandcol");
+    const elemTyp = document.getElementById("rcc-bandtyp");
+    const valueResult = document.getElementById("rcc-value");
+    const toleranceResult = document.getElementById("rcc-tolerance");
+    const tcrResult = document.getElementById("rcc-tcr");
+
+    // Define band information.
+    const bandCounts = [3, 4, 5, 6];
+    const bandNames = ["val1", "val2", "val3", "mul", "tol", "tcr"];
+    const bandTypes = ["1st", "2nd", "3rd", "Mul.", "Tol.", "TCR"];
+    const bandGroups = [[1, 0, 3], [1, 0, 3, 4], [2, 1, 0, 3, 4], [2, 1, 0, 3, 4, 5]];
+    const bandColors = [
+        { name: "Blk", full: "Black", val: 0, mul: 0, tcr: 250 },
+        { name: "Brn", full: "Brown", val: 1, mul: 1, tol: 1, tcr: 100 },
+        { name: "Red", full: "Red", val: 2, mul: 2, tol: 2, tcr: 50 },
+        { name: "Org", full: "Orange", val: 3, mul: 3, tol: 0.05, tcr: 15 },
+        { name: "Yel", full: "Yellow", val: 4, mul: 4, tol: 0.02, tcr: 25 },
+        { name: "Grn", full: "Green", val: 5, mul: 5, tol: 0.5, tcr: 20 },
+        { name: "Blu", full: "Blue", val: 6, mul: 6, tol: 0.25, tcr: 10 },
+        { name: "Vio", full: "Violet", val: 7, mul: 7, tol: 0.1, tcr: 5 },
+        { name: "Gry", full: "Gray", val: 8, mul: 8, tol: 0.01, tcr: 1 },
+        { name: "Wht", full: "White", val: 9, mul: 9 },
+        { name: "Gld", full: "Gold", mul: -1, tol: 5 },
+        { name: "Slv", full: "Silver", mul: -2, tol: 10 },
+        { name: "Pnk", full: "Pink", mul: -3 }
+    ];
+
+    // Results updater.
+    var currIndex = 0;
+    function updateResults() {
+
+        // Initialize results.
+        var ind = 0;
+        var sum = 0;
+        var tol = 0;
+        var tcr = 0;
+
+        // Calculate accordingly.
+        bandGroups[currIndex].forEach((group) => {
+
+            // Get values.
+            const bandName = bandNames[group];
+            const rawValue = JSON.parse(document.getElementById(`rcc-bandcol-${bandName}`).value).value;
+            const typeId = bandName.substring(0, 3);
+
+            // Perform operation.
+            switch (typeId) {
+                case "val":
+                    sum += rawValue * Math.pow(10, ind);
+                    ind++;
+                    break;
+                case "mul":
+                    sum = sum * Math.pow(10, rawValue);
+                    break;
+                case "tol":
+                    tol = rawValue;
+                    break;
+                case "tcr":
+                    tcr = rawValue;
+                    break;
+                default: break;
+            }
+
+        });
+
+        // Format resistance value with SI prefixes
+        function formatResistance(value) {
+            if (value >= 1e9) return (value / 1e9).toFixed(2) + "G";
+            if (value >= 1e6) return (value / 1e6).toFixed(2) + "M";
+            if (value >= 1e3) return (value / 1e3).toFixed(2) + "k";
+            return value.toFixed(3);
+        }
+
+        // Update displays.
+        valueResult.textContent = formatResistance(sum);
+        toleranceResult.textContent = tol;
+        tcrResult.textContent = tcr;
+
+    }
+
+    // Generate band selectors.
+    elemSel.innerHTML = "";
+    var defaultSel = null;
+    bandCounts.forEach((count, index) => {
+
+        // Generate selection id.
+        const selectId = `rcc-bandsel-${count}`;
+
+        // Create input.
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.classList.add("btn-check");
+        input.name = "rcc-bandsel";
+        input.id = selectId;
+        input.value = index;
+        input.autocomplete = "off";
+        input.checked = (index == 0);
+        elemSel.appendChild(input);
+
+        // Create label.
+        const label = document.createElement("label");
+        label.classList.add("btn", "btn-outline-primary", "text-body");
+        label.htmlFor = selectId;
+        label.textContent = `${count} Band`;
+        elemSel.appendChild(label);
+
+        // Set up input event listener.
+        function handleChange(doResults = true) {
+
+            // Update index.
+            currIndex = parseInt(input.value, 10);
+
+            // Get groups.
+            const groups = bandGroups[currIndex];
+
+            // Update color selector visibilities.
+            bandNames.forEach((bandName, index) => {
+                const div1 = document.getElementById(`rcc-bandcol-${bandName}-parent`);
+                const div2 = document.getElementById(`rcc-bandtyp-${bandName}`);
+                if (groups.includes(index)) {
+                    div1.classList.remove('d-none');
+                    div2.classList.remove('d-none');
+                } else {
+                    div1.classList.add('d-none');
+                    div2.classList.add('d-none');
+                }
+            });
+
+            // Update tolerance visibility.
+            const tol = document.getElementById("rcc-tolerance-parent");
+            if (input.value == "0") {
+                tol.classList.add('d-none');
+            } else {
+                tol.classList.remove('d-none');
+            }
+
+            // Update TCR visibility.
+            const tcr = document.getElementById("rcc-tcr-parent");
+            if (input.value != "3") {
+                tcr.classList.add('d-none');
+            } else {
+                tcr.classList.remove('d-none');
+            }
+
+            // Update results.
+            if (doResults) updateResults();
+
+        }
+        if (input.checked) defaultSel = handleChange;
+        input.addEventListener("change", () => handleChange());
+
+    });
+
+    // Generate color selectors/types.
+    elemCol.innerHTML = "";
+    elemTyp.innerHTML = "";
+    var defaultCols = [];
+    bandNames.forEach((bandName, index) => {
+
+        // Generate ids.
+        const selectId = `rcc-bandcol-${bandName}`;
+        const div1Id = `${selectId}-parent`;
+        const div2Id = `rcc-bandtyp-${bandName}`;
+        const typeId = bandName.substring(0, 3);
+
+        // Create parent 1.
+        const parent1 = document.createElement("div");
+        parent1.classList.add("col");
+        parent1.id = div1Id;
+
+        // Create parent 2.
+        const parent2 = document.createElement("div");
+        parent2.classList.add("col");
+        parent2.id = div2Id;
+        parent2.textContent = bandTypes[index];
+
+        // Create selector.
+        const select = document.createElement("select");
+        select.classList.add("form-select", "form-select-sm", "nodrop");
+        select.id = selectId;
+
+        // Append children.
+        bandColors.forEach((color, index) => {
+            if (!Object.hasOwn(color, typeId)) return;
+            const option = document.createElement("option");
+            option.value = JSON.stringify({ value: color[typeId], color: color.full });
+            option.textContent = color.name;
+            option.selected = (index == 0);
+            select.appendChild(option);
+        });
+        parent1.appendChild(select);
+        elemCol.appendChild(parent1);
+        elemTyp.appendChild(parent2);
+
+        // Set up select event listener.
+        function handleChange(doResults = true) {
+
+            // Get value object.
+            const value = JSON.parse(select.value);
+
+            // Update border color.
+            select.style.borderColor = value.color;
+
+            // Update results.
+            if (doResults) updateResults();
+
+        }
+        defaultCols.push(handleChange);
+        select.addEventListener("change", () => handleChange());
+
+    });
+
+    // Hit defaults.
+    defaultCols.forEach((col) => col(false));
+    defaultSel(false);
+    updateResults();
+
+}
+
+//==============================================================================
 // SEMI-STATIC INITIALIZATION
 //==============================================================================
 
@@ -302,4 +530,5 @@ document.addEventListener("DOMContentLoaded", function () {
     initQuicklinks();
     initSIRatio();
     initSelfDestruct();
+    initRColorCodes();
 });
