@@ -24,6 +24,17 @@ function getJSON(url) {
     });
 }
 
+// XML helper.
+function getXML(url) {
+    return new Promise((resolve) => {
+        fetch(url)
+            .then(response => response.text())
+            .then(str => (new window.DOMParser()).parseFromString(str, "application/xml"))
+            .then(data => resolve({ success: true, data }))
+            .catch(error => resolve({ success: false, data: error }));
+    });
+}
+
 // Update manager helper.
 function startUpdateManager(widgets) {
     widgets.forEach((widget) => {
