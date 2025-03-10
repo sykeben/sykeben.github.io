@@ -180,89 +180,6 @@ const updateCampusWeather = (id, lastData = null) => new Promise((resolve) => {
 });
 
 //==============================================================================
-// BREAKING BAD QUOTE
-//==============================================================================
-
-// BB Quote.
-const updateBBQuote = (id, lastData = null) => new Promise((resolve) => {
-
-    // Promise data.
-    promiseData = lastData ? new Promise((resolve) => {
-
-        // Re-use existing data.
-        resolve(lastData);
-
-    }) : new Promise((resolve) => {
-
-        // Get new data.
-        getJSON(`https://api.breakingbadquotes.xyz/v1/quotes`).then((result) => {
-            if (result.success) {
-                const data = result.data[0];
-                resolve({ quote: data.quote, author: data.author });
-            } else {
-                resolve(null);
-            }
-        });
-
-    });
-
-    // Update.
-    promiseData.then((newData) => {
-        if (newData) {
-            updateText(id, "quote", newData.quote);
-            updateText(id, "author", newData.author);
-            masonry.layout();
-        }
-        resolve(newData);
-    });
-
-});
-
-//==============================================================================
-// NASA APOD
-//==============================================================================
-
-// NASA APoD.
-const updateNasaAPOD = (id, lastData = null) => new Promise((resolve) => {
-
-    // Promise data.
-    promiseData = lastData ? new Promise((resolve) => {
-
-        // Re-use existing data.
-        resolve(lastData);
-
-    }) : new Promise((resolve) => {
-
-        // Get new data.
-        getJSON(`https://api.nasa.gov/planetary/apod?api_key=${config.nasaKey}`).then((result) => {
-            if (result.success) {
-                const data = result.data;
-                resolve({
-                    title: data.title,
-                    desc: data.explanation,
-                    img: { sd: data.url, hd: data.hdurl }
-                });
-            } else {
-                resolve(null);
-            }
-        });
-
-    });
-
-    // Update.
-    promiseData.then((newData) => {
-        if (newData) {
-            updateText(id, "title", newData.title);
-            updateText(id, "modal-title", newData.title);
-            updateText(id, "modal-desc", newData.desc);
-            updateImage(id, "img", newData.img.sd, true);
-        }
-        resolve(newData);
-    });
-
-});
-
-//==============================================================================
 // ELECTRICAL ENGINEERING QUOTE
 //==============================================================================
 
@@ -342,6 +259,50 @@ const updateEEQuote = (id, lastData = null) => new Promise((resolve) => {
         masonry.layout();
     }
     resolve(newData);
+
+});
+
+//==============================================================================
+// NASA APOD
+//==============================================================================
+
+// NASA APoD.
+const updateNasaAPOD = (id, lastData = null) => new Promise((resolve) => {
+
+    // Promise data.
+    promiseData = lastData ? new Promise((resolve) => {
+
+        // Re-use existing data.
+        resolve(lastData);
+
+    }) : new Promise((resolve) => {
+
+        // Get new data.
+        getJSON(`https://api.nasa.gov/planetary/apod?api_key=${config.nasaKey}`).then((result) => {
+            if (result.success) {
+                const data = result.data;
+                resolve({
+                    title: data.title,
+                    desc: data.explanation,
+                    img: { sd: data.url, hd: data.hdurl }
+                });
+            } else {
+                resolve(null);
+            }
+        });
+
+    });
+
+    // Update.
+    promiseData.then((newData) => {
+        if (newData) {
+            updateText(id, "title", newData.title);
+            updateText(id, "modal-title", newData.title);
+            updateText(id, "modal-desc", newData.desc);
+            updateImage(id, "img", newData.img.sd, true);
+        }
+        resolve(newData);
+    });
 
 });
 
@@ -431,7 +392,6 @@ startUpdateManager([
     new Widget("moment-time", updateMomentTime, 1000, false),
     new Widget("moment-date", updateMomentDate, 60000, false),
     new Widget("weather", updateCampusWeather, 900000, true),
-    new Widget("bbquote", updateBBQuote, 1800000, true),
+    new Widget("eequote", updateEEQuote, 3600000, true),
     new Widget("nasaapod", updateNasaAPOD, 21600000, true),
-    new Widget("eequote", updateEEQuote, 3600000, true)
 ]);
