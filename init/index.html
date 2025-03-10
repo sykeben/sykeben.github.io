@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Metadata -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Init() &bull; SykeBen</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/branding/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/branding/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/branding/favicon-16x16.png" />
+    <link rel="manifest" href="/assets/branding/site.webmanifest" />
+
+    <!-- Bootstrap Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/assets/styles/custom.css" />
+
+</head>
+
+<body class="d-flex flex-column min-vh-100" data-bs-theme="dark">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg shadow-sm sticky-top bg-black">
+        <div class="container-fluid">
+
+            <!-- Branding -->
+            <a class="navbar-brand" href="/">
+                <img src="/assets/branding/logo.png" alt="Logo" width="24" height="24" loading="eager"
+                    class="rounded d-inline-block align-text-top border border-light-subtle">
+                SykeBen
+            </a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/galleries/">Galleries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/init/">Init()</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container-fluid mt-4 text-center">
+        <div class="row m-0" id="widget-grid">
+
+            <!-- Moment -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <p class="card-text mb-2"><em>Current Time and Date</em></p>
+                        <h1 class="card-title mb-0" id="moment-time">[Locale Time]</h1>
+                        <p class="card-text lead mb-0" id="moment-date">[Locale Date]</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weather -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="container-fluid">
+
+                            <!-- Notice -->
+                            <div class="row mb-2">
+                                <div class="col-12">
+                                    <p class="card-text mb-0">
+                                        <em>
+                                            Weather at Purdue University
+                                            (<span id="weather-station">[Station]</span>)
+                                        </em>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Conditions -->
+                            <div class="row align-items-center">
+
+                                <!-- Icon -->
+                                <div class="col-4 p-0 m-0">
+                                    <img id="weather-icon" src="assets/placeholders/weather-icon.webp"
+                                        class="img-fluid biz-img rounded-1 shadow-sm">
+                                </div>
+
+                                <!-- Data -->
+                                <div class="col-8">
+                                    <h1 class="card-title">
+                                        <span id="weather-temp-real">[Temp]</span>&deg;F
+                                        <small class="text-secondary">
+                                            <span id="weather-text">[Text]</span>
+                                        </small>
+                                    </h1>
+                                    <p class="card-text mb-0">
+                                        Feels Like: <span id="weather-temp-feels">[Temp]</span>&deg;F
+                                    </p>
+                                    <p class="card-text mb-0">
+                                        Windspeed: <span id="weather-wind-speed">[Speed]</span>mph
+                                        <span id="weather-wind-direction">[Direction]</span>
+                                    </p>
+                                    <p class="card-text mb-0">
+                                        Humidity: <span id="weather-humid">[Percent]</span>%
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quicklinks -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="container-fluid">
+
+                            <!-- Notice -->
+                            <div class="row mb-2">
+                                <div class="col-12">
+                                    <em class="card-text mb-0">Campus Quicklinks</em>
+                                </div>
+                            </div>
+
+                            <!-- Listing -->
+                            <div class="row row-cols-2 g-2" id="quicklinks-list">[Links]</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SI Conversion -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="container-fluid">
+
+                            <!-- Notice -->
+                            <div class="row mb-2">
+                                <div class="col-12">
+                                    <em class="card-text mb-0">SI Ratio Conversion</em>
+                                </div>
+                            </div>
+
+                            <!-- Prefixes -->
+                            <div class="row mb-2 align-items-end">
+                                <div class="col">
+                                    <select class="form-select form-select-sm" id="si-ratio-from-fix">
+                                        <option value="null" disabled>[Options]</option>
+                                    </select>
+                                </div>
+                                <div class="col-auto px-0">
+                                    <i class="bi bi-arrow-left"></i>
+                                </div>
+                                <div class="col">
+                                    <select class="form-select form-select-sm" id="si-ratio-to-fix">
+                                        <option value="null" disabled>[Options]</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Values -->
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <input class="form-control form-control-sm nospin" type="number"
+                                        placeholder="From..." id="si-ratio-from-val">
+                                </div>
+                                <div class="col-auto px-0"><i class="bi bi-arrow-right"></i></div>
+                                <div class="col">
+                                    <input class="form-control form-control-sm nospin" type="number" placeholder="To..."
+                                        id="si-ratio-to-val">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wolfram Alpha -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="container-fluid">
+
+                            <!-- Notice -->
+                            <div class="row mb-2">
+                                <div class="col-12">
+                                    <em class="card-text mb-0">Wolfram|Alpha Query</em>
+                                </div>
+                            </div>
+
+                            <!-- Search Form -->
+                            <form id="wolfram-form" action="https://www.wolframalpha.com/input/" method="get"
+                                target="_blank">
+                                <div class="input-group input-group-sm mb-2">
+                                    <input type="text" class="form-control" name="i" id="wolfram-query"
+                                        placeholder="Enter a query..." autocomplete="off" required>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BB Quote -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+
+                        <!-- Notice -->
+                        <p class="card-text mb-2"><em>Breaking Bad Quote</em></p>
+
+                        <!-- Quote -->
+                        <p class="card-text lead mb-1">
+                            &ldquo;<span id="bbquote-quote">[Quote]</span>&rdquo;
+                        </p>
+                        <p class="card-text text-secondary mb-0">
+                            &mdash;&nbsp;<span id="bbquote-author">[Author]</span>&nbsp;&mdash;
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- NASA APoD -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+
+                    <!-- Content -->
+                    <div class="card-body">
+                        <p class="card-text mb-2"><em>NASA Astronomy Picture of the Day (APoD)</em></p>
+                        <h5 class="card-title mb-1" id="nasaapod-title">[Title]</h5>
+                    </div>
+
+                    <!-- Image -->
+                    <img class="card-img-bottom" id="nasaapod-img" data-bs-toggle="modal"
+                        data-bs-target="#nasaapod-modal" src="assets/placeholders/apod-generic.webp"
+                        title="Click me to open an explanation!">
+
+                </div>
+            </div>
+
+            <!-- Self-Destruct Button -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <p class="card-text mb-2"><em>Big Red Button</em></p>
+                        <button id="selfdestruct-btn" class="btn btn-lg btn-danger shadow-sm text-white"
+                            data-bs-toggle="modal" data-bs-target="#selfdestruct-modal">
+                            Activate Self-Destruct Sequence
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CityBus Map -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <p class="card-text mb-2"><em>Greater Lafayette CityBus</em></p>
+                        <div class="ratio ratio-1x1 overflow-hidden rounded p-0">
+                            <iframe src="https://bus.gocitybus.com/RouteMap" loading="lazy"
+                                sandbox="allow-scripts allow-same-origin"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resistor Color Codes -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="container-fluid">
+
+                            <!-- Notice -->
+                            <div class="row mb-2 g-0">
+                                <div class="col-12">
+                                    <em class="card-text mb-0">Resistor Color Codes</em>
+                                </div>
+                            </div>
+
+                            <!-- Band Selection -->
+                            <div class="row mb-2">
+                                <div class="col-12">
+                                    <div class="btn-group" role="group" id="rcc-bandsel">[Bands]</div>
+                                </div>
+                            </div>
+
+                            <!-- Color Selection & Names -->
+                            <div class="row mb-2 g-1" id="rcc-bandcol">[Colors]</div>
+                            <div class="row mb-2 g-1" id="rcc-bandtyp">[Types]</div>
+
+                            <!-- Value Display -->
+                            <div class="row mb-2 align-items-center">
+
+                                <!-- Resistance -->
+                                <div class="col">
+                                    <h1 class="card-title">
+                                        <span id="rcc-value">[Value]</span>&Omega;
+                                    </h1>
+                                </div>
+
+                                <!-- Other Metrics -->
+                                <div class="col-auto">
+                                    <small class="text-body-secondary fs-6" id="rcc-tolerance-parent">
+                                        Tolerance: &PlusMinus;<span id="rcc-tolerance">[Tol]</span>%
+                                    </small>
+                                    <br>
+                                    <small class="text-body-secondary fs-6" id="rcc-tcr-parent">
+                                        TCR: &PlusMinus;<span id="rcc-tcr">[TCR]</span>&times;10<sup>-6</sup>/K
+                                    </small>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EE Quote -->
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+
+                        <!-- Notice -->
+                        <p class="card-text mb-2"><em>Electrical Engineering Quote</em></p>
+
+                        <!-- Quote -->
+                        <p class="card-text lead mb-1">
+                            &ldquo;<span id="eequote-quote">[Quote]</span>&rdquo;
+                        </p>
+                        <p class="card-text text-secondary mb-0">
+                            &mdash;&nbsp;<span id="eequote-author">[Author]</span>&nbsp;&mdash;
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-auto">
+        <div class="bg-black shadow-sm mt-0 py-2 py-md-3">
+            <div class="container text-body-secondary">
+                <div class="row row-cols-1 row-cols-md-2 g-2 g-md-3">
+
+                    <!-- Copyright -->
+                    <div class="col-md-auto me-md-auto">
+                        &copy; 2025 - Benjamin Sykes
+                    </div>
+
+                    <!-- License -->
+                    <div class="col-md-auto">
+                        This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International
+                        License.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- NASA APoD Description Modal -->
+    <div class="modal fade" id="nasaapod-modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="nasaapod-modal-title">[Title]</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="nasaapod-modal-desc">[Desc]</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Self-Destruct Modal --->
+    <div class="modal fade" id="selfdestruct-modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="selfdestruct-modal-title">[Title]</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="selfdestruct-modal-desc">[Desc]</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="selfdestruct-modal-no">
+                        [No]
+                    </button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="selfdestruct-modal-yes">
+                        [Yes]
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Masonry Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+        crossorigin="anonymous"></script>
+    <script>
+        const masonry = new Masonry('#widget-grid', { percentPosition: true });
+        document.addEventListener("DOMContentLoaded", () => { masonry.layout(); });
+    </script>
+
+    <!-- Content Scripts -->
+    <script src="assets/scripts/semistatics.js"></script>
+    <script src="assets/scripts/dynamics.js"></script>
+
+</body>
+
+</html>
