@@ -42,6 +42,7 @@ function initQuicklinks() {
         const a = document.createElement("a");
         a.href = link.url;
         a.textContent = link.title;
+        a.target = "_blank";
 
         // Add to container.
         let order = [i, span, a];
