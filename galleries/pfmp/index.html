@@ -59,15 +59,13 @@
     </nav>
 
     <!-- Gallery Grid -->
-    <section class="container mt-3 mt-md-4 mt-lg-5">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-1 g-sm-2 g-md-3 g-xl-4" id="gallery"
-            data-gallery-size="40">
-        </div>
-    </section>
+    <div class="container-fluid mt-4 text-center">
+        <div class="row m-0" id="gallery-grid" data-gallery-size="40"></div>
+    </div>
 
     <!-- Gallery Item Template -->
     <template id="gallery-item">
-        <div class="col align-self-center">
+        <div class="col col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
             <a class="gallery-link" data-toggle="lightbox" data-gallery="auto-gallery">
                 <img class="gallery-img img-fluid border border-dark-subtle rounded shadow album-img" loading="lazy">
             </a>
@@ -76,7 +74,7 @@
 
     <!-- Footer -->
     <footer class="mt-auto">
-        <div class="bg-black shadow-sm mt-3 mt-md-4 mt-lg-5 py-2 py-md-3">
+        <div class="bg-black shadow-sm mt-0 py-2 py-md-3">
             <div class="container text-body-secondary">
                 <div class="row row-cols-1 row-cols-md-2 g-2 g-md-3">
 
@@ -109,6 +107,11 @@
     <!-- Lightbox Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"
         integrity="sha384-398tSLFroXk6zOeoF9IVCUMWfvh8X0em06V+Okl8ysVHl2xOCqZNylGT5tps1O0Y"
+        crossorigin="anonymous"></script>
+
+    <!-- Masonry Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
         crossorigin="anonymous"></script>
 
     <!-- Custom Scripts -->

@@ -4,14 +4,17 @@
 function generateGallery() {
 
     // Get elements.
-    const gallery = document.getElementById("gallery");
+    const grid = document.getElementById("gallery-grid");
     const template = document.getElementById("gallery-item");
 
     // Get attributes.
-    const size = parseInt(gallery.getAttribute("data-gallery-size"), 10);
+    const size = parseInt(grid.getAttribute("data-gallery-size"), 10);
 
     // Get base URL.
     const baseURL = 'assets';
+
+    // Track loaded images.
+    let loadedImages = 0;
 
     // Generate elements.
     for (let index = 1; index <= size; index++) {
@@ -32,9 +35,18 @@ function generateGallery() {
         img.src = imgURL;
         img.id = `img-${index}`;
         img.alt = `Image ${index}`;
+
+        // Ensure images load before initializing Masonry.
+        img.onload = () => {
+            loadedImages++;
+            if (loadedImages === size) {
+                const masonry = new Masonry('#gallery-grid', { itemSelector: '.col', percentPosition: true });
+                masonry.layout();
+            }
+        };
         
         // Append clone.
-        gallery.appendChild(clone);
+        grid.appendChild(clone);
 
     }
 
