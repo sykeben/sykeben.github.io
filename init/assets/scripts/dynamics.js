@@ -143,12 +143,12 @@ const updateCampusWeather = (id, lastData = null) => new Promise((resolve) => {
                 const data = result.data.properties;
                 resolve({
                     station: config.noaaStation,
-                    icon: data.icon,
+                    icon: data.icon || "assets/placeholders/weather-icon.webp",
                     temp: {
                         real: degCtoF(data.temperature.value),
                         feels: degCtoF(data.windChill.value)
                     },
-                    text: data.textDescription,
+                    text: data.textDescription || "Unknown",
                     humid: data.relativeHumidity.value,
                     wind: {
                         speed: KtoMi(data.windSpeed.value),
@@ -196,12 +196,12 @@ const updateEEQuote = (id, lastData = null) => new Promise((resolve) => {
         { quote: "Science is what we understand well enough to explain to a computer. Art is everything else we do.", author: "Donald Knuth" },
         { quote: "Innovation is the outcome of a habit, not a random act.", author: "Herbert Simon" },
         { quote: "An engineer is someone who can do for a dime what any fool can do for a dollar.", author: "Theodore Roosevelt" },
-        { quote: "The main thing in technology is to understand how to use the tools, not just make them.", author: "Bob Metcalfe (Purdue Alumni)" },
+        { quote: "The main thing in technology is to understand how to use the tools, not just make them.", author: "Bob Metcalfe" },
         { quote: "Electrons can move and work wonders.", author: "Nikola Tesla" },
         { quote: "The most important part of a process is not the apparatus, it's the ideas it represents.", author: "Vannevar Bush" },
         { quote: "The principle of a well-made electric machine is that all parts work as a unit.", author: "Thomas Edison" },
         { quote: "What is known to be true is only true as long as it is understood.", author: "George Washington Carver" },
-        { quote: "Every day I am learning something new, because everything I've learned up to now will soon be obsolete.", author: "Bill Gates (Purdue Alumni)" },
+        { quote: "Every day I am learning something new, because everything I've learned up to now will soon be obsolete.", author: "Bill Gates" },
         { quote: "To invent is to rebel against the ordinary.", author: "James Clerk Maxwell" },
         { quote: "The real problem is not whether machines think but whether men do.", author: "B.F. Skinner" },
         { quote: "The most incomprehensible thing about the world is that it is comprehensible.", author: "Albert Einstein" },
