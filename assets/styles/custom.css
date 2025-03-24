@@ -3,6 +3,11 @@
     cursor: pointer;
 }
 
+/* Gotoable Element */
+.gotoable {
+    scroll-margin-top: 2rem;
+}
+
 /* Nospin Spinbox */
 input.nospin::-webkit-outer-spin-button,
 input.nospin::-webkit-inner-spin-button {

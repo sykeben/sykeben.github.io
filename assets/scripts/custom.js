@@ -11,8 +11,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Back to TOC button functionality.
-    document.getElementById("b2toc")?.addEventListener("click", () => {
-        document.getElementById("toc")?.scrollIntoView({ block: "center", inline: "center" });
+    const tocBlock = document.getElementById("toc");
+    if (tocBlock) document.getElementById("b2toc")?.addEventListener("click", () => {
+        tocBlock.scrollIntoView({
+            block: "center",
+            inline: "center"
+        });
+    });
+
+    // Goto button functionality.
+    [...document.getElementsByClassName("btn-goto")].forEach((btn) => {
+
+        // Get targets.
+        const gotoId = btn.getAttribute("data-goto-id");
+        if (!gotoId) return;
+        const gotoBlock = document.getElementById(gotoId);
+        if (!gotoBlock) return;
+
+        // Configure event.
+        btn.addEventListener("click", () => {
+            gotoBlock.scrollIntoView({
+                block: "start",
+                inline: "nearest"
+            });
+        });
+
     });
 
 });
