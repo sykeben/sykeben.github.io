@@ -20,15 +20,18 @@ content = f"""<?xml version="1.0" encoding="UTF-8"?>
 
 # Crawl directories for HTML files, excluding "assets" directories.
 for root, dirs, files in os.walk(root_dir):
-    if "assets" in dirs:
-        dirs.remove("assets")  # Prevent os.walk from entering assets directories
 
+    # Prevent os.walk from entering assets directories.
+    if "assets" in dirs:
+        dirs.remove("assets")
+
+    # Index HTML files.
     for file in files:
         if file.endswith(".html"):
             rel_path = os.path.relpath(os.path.join(root, file), root_dir).replace(
                 os.sep, "/"
             )
-            url = f"{base_url}/{rel_path}".replace("//", "/")
+            url = f"{base_url}/{rel_path}".replace("///", "/").replace("//", "/").replace(":/", "://")
             lastmod = datetime.today().strftime("%Y-%m-%d")
 
             content += f"""  <url>
