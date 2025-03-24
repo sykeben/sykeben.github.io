@@ -71,15 +71,15 @@
 
     <!-- Table of Contents -->
     <section id="toc" class="container pt-3 pt-sm-4 pt-lg-5 text-center">
-        <a href="#science" class="btn btn-secondary shadow-sm mb-2">Science</a>&nbsp;
-        <a href="#problem" class="btn btn-secondary shadow-sm mb-2">Problem</a>&nbsp;
-        <a href="#solution" class="btn btn-secondary shadow-sm mb-2">Solution</a>&nbsp;
-        <a href="#benefits" class="btn btn-secondary shadow-sm mb-2">Benefits</a>&nbsp;
-        <a href="#feedback" class="btn btn-secondary shadow-sm mb-2">Feedback</a>&nbsp;
+        <button data-goto-id="science" class="btn btn-goto btn-secondary shadow-sm mb-2">Science</button>&nbsp;
+        <button data-goto-id="problem" class="btn btn-goto btn-secondary shadow-sm mb-2">Problem</button>&nbsp;
+        <button data-goto-id="solution" class="btn btn-goto btn-secondary shadow-sm mb-2">Solution</button>&nbsp;
+        <button data-goto-id="benefits" class="btn btn-goto btn-secondary shadow-sm mb-2">Benefits</button>&nbsp;
+        <button data-goto-id="feedback" class="btn btn-goto btn-secondary shadow-sm mb-2">Feedback</button>&nbsp;
     </section>
 
     <!-- Science -->
-    <section id="science" class="container pt-3 pt-sm-4 pt-lg-5">
+    <section id="science" class="container gotoable pt-3 pt-sm-4 pt-lg-5">
 
         <!-- Header -->
         <h2 class="text-shadow">The Science</h2>
@@ -107,7 +107,7 @@
     </section>
 
     <!-- Problem -->
-    <section id="problem" class="container pt-3 pt-sm-4 pt-lg-5">
+    <section id="problem" class="container gotoable pt-3 pt-sm-4 pt-lg-5">
 
         <!-- Header -->
         <h2 class="text-shadow">Problem: Early Classes</h2>
@@ -135,7 +135,7 @@
     </section>
 
     <!-- Solution -->
-    <section id="solution" class="container pt-3 pt-sm-4 pt-lg-5">
+    <section id="solution" class="container gotoable pt-3 pt-sm-4 pt-lg-5">
 
         <!-- Header -->
         <h2 class="text-shadow">Solution: My Routine</h2>
@@ -217,7 +217,7 @@
     </section>
 
     <!-- Benefits -->
-    <section id="benefits" class="container pt-3 pt-sm-4 pt-lg-5">
+    <section id="benefits" class="container gotoable pt-3 pt-sm-4 pt-lg-5">
 
         <!-- Header -->
         <h2 class="text-shadow">Personal Opinion: Benefits</h2>
@@ -243,7 +243,7 @@
     </section>
 
     <!-- Feedback -->
-    <section id="feedback" class="container pt-3 pt-sm-4 pt-lg-5">
+    <section id="feedback" class="container gotoable pt-3 pt-sm-4 pt-lg-5">
 
         <!-- Header -->
         <h2 class="text-shadow">Feedback?</h2>
@@ -281,14 +281,14 @@
     </footer>
 
     <!-- Back to TOC Button -->
-    <a href="#toc" class="btn btn-secondary btn-back2toc shadow-sm rounded-circle position-fixed" title="Jump to TOC">
+    <button id="b2toc" class="btn btn-secondary btn-back2toc shadow-sm rounded-circle position-fixed">
         <i class="bi bi-bookmarks"></i>
-    </a>
+    </button>
 
     <!-- Back to Top Button -->
-    <a href="#" class="btn btn-secondary btn-back2top shadow-sm rounded-circle position-fixed" title="Jump to Top">
+    <button id="b2top" class="btn btn-secondary btn-back2top shadow-sm rounded-circle position-fixed">
         <i class="bi bi-chevron-double-up"></i>
-    </a>
+    </button>
 
     <!-- Bootstrap Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -299,6 +299,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"
         integrity="sha384-398tSLFroXk6zOeoF9IVCUMWfvh8X0em06V+Okl8ysVHl2xOCqZNylGT5tps1O0Y"
         crossorigin="anonymous"></script>
+
+    <!-- Custom Scripts -->
+    <script src="/assets/scripts/custom.js"></script>
 
 </body>
 
