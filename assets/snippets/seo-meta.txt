@@ -1,0 +1,31 @@
+<!-- Robots Metadata -->
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Portfolio of Benjamin Sykes, a web developer with a focus on front-end design, UI/UX, and creative solutions. [META-DESC]">
+    <meta name="keywords" content="Benjamin Sykes, web developer, UI/UX, front-end development, portfolio, [META-TAGS]">
+
+    <!-- OpenGraph Metadata -->
+    <meta property="og:title" content="[META-PAGE] • SykeBen">
+    <meta property="og:description" content="Portfolio of Benjamin Sykes, a web developer with a focus on front-end design, UI/UX, and creative solutions. [META-DESC]">
+    <meta property="og:url" content="https://sykeben.github.io/[META-PATH]">
+    <meta property="og:image" content="https://sykeben.github.io/assets/branding/og-image.png">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Metadata -->
+    <meta name="twitter:title" content="[META-PAGE] • SykeBen">
+    <meta name="twitter:description" content="Portfolio of Benjamin Sykes, a web developer with a focus on front-end design, UI/UX, and creative solutions. [META-DESC]">
+    <meta name="twitter:image" content="https://sykeben.github.io/assets/branding/twitter-card.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Benjamin Sykes",
+        "url": "https://sykeben.github.io/[META-PATH]",
+        "sameAs": [
+            "https://github.com/sykeben",
+            "https://www.linkedin.com/in/btsykes"
+        ]
+    }
+    </script>

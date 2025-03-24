@@ -1,0 +1,21 @@
+################################################################################
+# Last generated 2025-03-24 14:40:43 EDT
+################################################################################
+
+# Allow all crawlers to access everything
+User-agent: *
+Disallow:
+
+# Disallow bots from crawling assets, scripts, or placeholder files
+Disallow: /assets
+Disallow: /about/assets
+Disallow: /galleries/assets
+Disallow: /galleries/pfmp/assets
+Disallow: /projects/assets
+Disallow: /init/assets
+Disallow: /blog/20230915-internship-applications/assets
+Disallow: /blog/20250207-website-rebirth/assets
+Disallow: /blog/20220228-morning-routine/assets
+
+# Sitemap
+Sitemap: https://sykeben.github.io/sitemap.xml
