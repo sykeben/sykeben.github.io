@@ -28,17 +28,57 @@ for root, dirs, files in os.walk(root_dir):
     # Index HTML files.
     for file in files:
         if file.endswith(".html"):
-            rel_path = os.path.relpath(os.path.join(root, file), root_dir).replace(
-                os.sep, "/"
-            )
-            url = f"{base_url}/{rel_path}".replace("///", "/").replace("//", "/").replace(":/", "://")
-            lastmod = datetime.today().strftime("%Y-%m-%d")
 
+            # Get full path.
+            full_file = os.path.join(root, file)
+
+            # Truncate indexes.
+            is_index = False
+            trun_file = full_file
+            if full_file.endswith(f"{os.sep}index.html"):
+                is_index = True
+                trun_file = f"{os.path.dirname(full_file)}"
+
+            # Generate URL.
+            rel_path = os.path.relpath(trun_file, root_dir).replace(os.sep, "/")
+            url = (
+                f"{base_url}/{rel_path}{'/' if is_index else ''}".replace("/.", "/")
+                .replace("///", "/")
+                .replace("//", "/")
+                .replace(":/", "://")
+            )
+
+            # Generate last modified date.
+            lastmod = datetime.fromtimestamp(os.path.getmtime(full_file)).strftime(
+                "%Y-%m-%d"
+            )
+
+            # Generate frequency.
+            freq = "monthly"
+            if url == f"{base_url}/contact/":
+                freq = "yearly"
+            elif url == f"{base_url}/blog/":
+                freq = "weekly"
+            elif url.startswith(f"{base_url}/blog/"):
+                freq = "yearly"
+            elif url == f"{base_url}/galleries/":
+                freq = "weekly"
+            elif url.startswith(f"{base_url}/galleries/"):
+                freq = "yearly"
+            elif url == f"{base_url}/init/":
+                freq = "weekly"
+
+            # Generate priority.
+            priority = "%.1f" % (
+                1 - (0.175 * (trun_file.count("/") - 5))
+            )
+
+            # Update content.
             content += f"""  <url>
     <loc>{url}</loc>
     <lastmod>{lastmod}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>{freq}</changefreq>
+    <priority>{priority}</priority>
   </url>
 """
 
