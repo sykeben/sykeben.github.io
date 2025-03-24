@@ -451,6 +451,9 @@ function initRColorCodes() {
             // Update results.
             if (doResults) updateResults();
 
+            // Rearrange.
+            masonry.layout();
+
         }
         if (input.checked) defaultSel = handleChange;
         input.addEventListener("change", () => handleChange());
