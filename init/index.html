@@ -114,7 +114,7 @@
                                         Feels Like: <span id="weather-temp-feels">[Temp]</span>&deg;F
                                     </p>
                                     <p class="card-text mb-0">
-                                        Windspeed: <span id="weather-wind-speed">[Speed]</span>mph
+                                        Wind: <span id="weather-wind-speed">[Speed]</span>mph
                                         <span id="weather-wind-direction">[Direction]</span>
                                     </p>
                                     <p class="card-text mb-0">
@@ -286,7 +286,7 @@
                         <p class="card-text mb-2"><em>Greater Lafayette CityBus</em></p>
                         <div class="ratio ratio-1x1 overflow-hidden rounded p-0">
                             <iframe src="https://bus.gocitybus.com/RouteMap" loading="lazy"
-                                sandbox="allow-scripts allow-same-origin"></iframe>
+                                sandbox="allow-scripts allow-same-origin allow-storage-access-by-user-activation"></iframe>
                         </div>
                     </div>
                 </div>
@@ -414,7 +414,9 @@
         crossorigin="anonymous"></script>
     <script>
         const masonry = new Masonry('#widget-grid', { percentPosition: true });
-        document.addEventListener("DOMContentLoaded", () => { masonry.layout(); });
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => { masonry.layout(); }, 5000);
+        });
     </script>
 
     <!-- Content Scripts -->

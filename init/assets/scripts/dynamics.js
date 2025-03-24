@@ -145,14 +145,14 @@ const updateCampusWeather = (id, lastData = null) => new Promise((resolve) => {
                     station: config.noaaStation,
                     icon: data.icon || "assets/placeholders/weather-icon.webp",
                     temp: {
-                        real: degCtoF(data.temperature.value),
-                        feels: degCtoF(data.windChill.value)
+                        real: degCtoF(data.temperature.value).toFixed(1) || "??",
+                        feels: degCtoF(data.windChill.value).toFixed(1) || "??"
                     },
                     text: data.textDescription || "Unknown",
-                    humid: data.relativeHumidity.value,
+                    humid: data.relativeHumidity.value.toFixed(1) || "??",
                     wind: {
-                        speed: KtoMi(data.windSpeed.value),
-                        direction: nwseAngle(data.windDirection.value)
+                        speed: KtoMi(data.windSpeed.value).toFixed(1) || "??",
+                        direction: nwseAngle(data.windDirection.value) || "??"
                     }
                 });
             } else {
@@ -167,12 +167,12 @@ const updateCampusWeather = (id, lastData = null) => new Promise((resolve) => {
         if (newData) {
             updateText(id, "station", newData.station);
             updateImage(id, "icon", newData.icon);
-            updateText(id, "temp-real", Math.round(newData.temp.real));
+            updateText(id, "temp-real", newData.temp.real);
             updateText(id, "text", newData.text);
-            updateText(id, "temp-feels", Math.round(newData.temp.feels));
-            updateText(id, "wind-speed", Math.round(newData.wind.speed));
+            updateText(id, "temp-feels", newData.temp.feels);
+            updateText(id, "wind-speed", newData.wind.speed);
             updateText(id, "wind-direction", newData.wind.direction);
-            updateText(id, "humid", Math.round(newData.humid));
+            updateText(id, "humid", newData.humid);
         }
         resolve(newData);
     });
@@ -282,9 +282,9 @@ const updateNasaAPOD = (id, lastData = null) => new Promise((resolve) => {
             if (result.success) {
                 const data = result.data;
                 resolve({
-                    title: data.title,
-                    desc: data.explanation,
-                    img: { sd: data.url, hd: data.hdurl }
+                    title: data.title || "No Data",
+                    desc: data.explanation || "Explanation Missing",
+                    img: data.url || data.hdurl || "assets/placeholders/apod-generic.webp"
                 });
             } else {
                 resolve(null);
@@ -299,7 +299,7 @@ const updateNasaAPOD = (id, lastData = null) => new Promise((resolve) => {
             updateText(id, "title", newData.title);
             updateText(id, "modal-title", newData.title);
             updateText(id, "modal-desc", newData.desc);
-            updateImage(id, "img", newData.img.sd, true);
+            updateImage(id, "img", newData.img, true);
         }
         resolve(newData);
     });
