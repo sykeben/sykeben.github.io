@@ -523,6 +523,35 @@ function initRColorCodes() {
 
 }
 
+function initStockTicker() {
+
+    // Get elements.
+    const container = document.getElementById("ticker-widget");
+
+    // Define ticker config.
+    const tickerConfig = {
+        symbols: [
+            { description: "Honda Mtr", proName: "NYSE:HMC" },
+            { description: "HP Ent", proName: "NYSE:HPE" },
+            { description: "D Wave", proName: "NYSE:QBTS" },
+            { description: "Rivian Auto", proName: "NASDAQ:RIVN" },
+            { description: "AT&T Inc", proName: "NYSE:T" }
+        ],
+        showSymbolLogo: true,
+        isTransparent: false,
+        displayMode: "compact",
+        colorTheme: "dark",
+        locale: "en"
+    };
+
+    // Initialize script.
+    const script = document.createElement("script");
+    script.src = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js";
+    script.innerHTML = JSON.stringify(tickerConfig);
+    container.append(script);
+
+}
+
 //==============================================================================
 // SEMI-STATIC INITIALIZATION
 //==============================================================================
@@ -532,4 +561,5 @@ document.addEventListener("DOMContentLoaded", function () {
     initSIRatio();
     initSelfDestruct();
     initRColorCodes();
+    initStockTicker();
 });
