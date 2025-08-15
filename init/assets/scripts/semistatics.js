@@ -534,11 +534,13 @@ function initStockTicker() {
     // Define ticker config.
     const tickerConfig = {
         symbols: [
-            { description: "Honda Mtr", proName: "NYSE:HMC" },
-            { description: "HP Ent", proName: "NYSE:HPE" },
-            { description: "D Wave", proName: "NYSE:QBTS" },
-            { description: "Rivian Auto", proName: "NASDAQ:RIVN" },
-            { description: "AT&T Inc", proName: "NYSE:T" }
+            { description: "T", proName: "NYSE:T" },
+            { description: "QBTS", proName: "NYSE:QBTS" },
+            { description: "FXAIX", proName: "NASDAQ:FXAIX" },
+            { description: "FNSTX", proName: "NASDAQ:FNSTX" },
+            { description: "HPE", proName: "NYSE:HPE" },
+            { description: "HMC", proName: "NYSE:HMC" },
+            { description: "RIVN", proName: "NASDAQ:RIVN" },
         ],
         showSymbolLogo: true,
         isTransparent: false,
