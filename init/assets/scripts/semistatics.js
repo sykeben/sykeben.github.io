@@ -14,7 +14,7 @@ function initQuicklinks() {
         { url: "https://dig.shovelapp.io/", title: "Shovel", icon: "calendar2-week" },
         { url: "https://purdue.brightspace.com/", title: "Piazza", icon: "chat-quote" },
         { url: "https://www.gradescope.com/", title: "Gradescope", icon: "bar-chart-line" },
-        { url: "https://bus.gocitybus.com/RouteMap/Index", title: "CityBus", icon: "bus-front" },
+        { url: "https://purdue.campus.eab.com", title: "BoilerConnect", icon: "person-badge" },
         { url: "https://mypurdue.purdue.edu/", title: "MyPurdue", icon: "mortarboard" },
         { url: "https://outlook.office.com/?realm=purdue.edu", title: "Outlook", icon: "envelope-at" },
         { url: "https://wpvapppcprt01.itap.purdue.edu:9192/mobile/release", title: "Printing", icon: "printer" },
